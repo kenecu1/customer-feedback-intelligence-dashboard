@@ -334,7 +334,7 @@ Raw feedback goes through 6 stages before it reaches the dashboard:
 
 Working within those limits, the system uses lightweight models to categorize and score all 176K records. Here is what each part does and why. Expand the sections below for the technical detail.
 
-> **Note:** The pipeline code was developed against proprietary company data and is not included in this public repo. This repository holds the interactive dashboard and synthetic sample data; the section below explains the approach.
+> **Note:** The pipeline code is built around internal company systems and data structures, so it is kept private. This public repo ships the interactive dashboard and fully synthetic sample data; the section below explains the approach.
 
 | Component | Model / Method | What it does |
 |-----------|---------------|--------------|
