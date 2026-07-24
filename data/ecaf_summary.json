@@ -1,0 +1,296 @@
+{
+  "_disclaimer": "SYNTHETIC DATA \u2014 generated for demonstration. Not real ECAFs.",
+  "total_ecafs": 750,
+  "total_feedback": 170740,
+  "by_category": {
+    "account_management": {
+      "broad_parent": "Account & Activation",
+      "feedback_count": 4829,
+      "ecaf_count": 15,
+      "ecaf_rate_pct": 0.31,
+      "pct_to_ceo": 53.3,
+      "pct_to_agency": 6.7,
+      "by_issue_class": {
+        "Account - Move Transfer": 7,
+        "Account Administration (Cable and Mobile)": 8
+      },
+      "avg_esc_score": 1.97
+    },
+    "activation": {
+      "broad_parent": "Account & Activation",
+      "feedback_count": 2234,
+      "ecaf_count": 11,
+      "ecaf_rate_pct": 0.49,
+      "pct_to_ceo": 18.2,
+      "pct_to_agency": 9.1,
+      "by_issue_class": {
+        "Mobile - Device Activation": 7,
+        "Equipment - Self Installation / Activation": 4
+      },
+      "avg_esc_score": 1.63
+    },
+    "billing": {
+      "broad_parent": "Billing & Payments",
+      "feedback_count": 59394,
+      "ecaf_count": 369,
+      "ecaf_rate_pct": 0.62,
+      "pct_to_ceo": 31.4,
+      "pct_to_agency": 5.7,
+      "by_issue_class": {
+        "Billing - Rate Adjustment": 71,
+        "Billing - Wants Lower Price": 76,
+        "Billing - Promo Roll Off / Step Up": 66,
+        "Payment - Mishandled / Misapplied / Missing": 56,
+        "Billing - One Time Charges": 48,
+        "Refund/Credit": 52
+      },
+      "avg_esc_score": 1.99
+    },
+    "cancellation": {
+      "broad_parent": "Billing & Payments",
+      "feedback_count": 2259,
+      "ecaf_count": 30,
+      "ecaf_rate_pct": 1.33,
+      "pct_to_ceo": 30.0,
+      "pct_to_agency": 23.3,
+      "by_issue_class": {
+        "Account - Voluntary Disconnect": 15,
+        "Account - Downgrade": 15
+      },
+      "avg_esc_score": 2.68
+    },
+    "connectivity": {
+      "broad_parent": "Service Issues",
+      "feedback_count": 22226,
+      "ecaf_count": 109,
+      "ecaf_rate_pct": 0.49,
+      "pct_to_ceo": 32.1,
+      "pct_to_agency": 6.4,
+      "by_issue_class": {
+        "Service / Feature Issues - Internet": 109
+      },
+      "avg_esc_score": 1.67
+    },
+    "delivery_shipping": {
+      "broad_parent": "Devices & Equipment",
+      "feedback_count": 1582,
+      "ecaf_count": 3,
+      "ecaf_rate_pct": 0.19,
+      "pct_to_ceo": 0.0,
+      "pct_to_agency": 0.0,
+      "by_issue_class": {
+        "Equipment Return": 2,
+        "Equipment - Fulfillment": 1
+      },
+      "avg_esc_score": 1.86
+    },
+    "device_repair": {
+      "broad_parent": "Devices & Equipment",
+      "feedback_count": 529,
+      "ecaf_count": 2,
+      "ecaf_rate_pct": 0.38,
+      "pct_to_ceo": 50.0,
+      "pct_to_agency": 0.0,
+      "by_issue_class": {
+        "Mobile - Device Lost/Stolen/Damaged": 2
+      },
+      "avg_esc_score": 1.45
+    },
+    "disconnect": {
+      "broad_parent": "Billing & Payments",
+      "feedback_count": 12,
+      "ecaf_count": 0,
+      "ecaf_rate_pct": 0.0,
+      "pct_to_ceo": 0.0,
+      "pct_to_agency": 0.0,
+      "by_issue_class": {},
+      "avg_esc_score": 0.0
+    },
+    "fraud_security": {
+      "broad_parent": "Trust & Safety",
+      "feedback_count": 654,
+      "ecaf_count": 6,
+      "ecaf_rate_pct": 0.92,
+      "pct_to_ceo": 16.7,
+      "pct_to_agency": 50.0,
+      "by_issue_class": {
+        "Suspected Security Concerns": 2,
+        "ID Theft / Fraud": 4
+      },
+      "avg_esc_score": 2.5
+    },
+    "general": {
+      "broad_parent": "General",
+      "feedback_count": 39272,
+      "ecaf_count": 10,
+      "ecaf_rate_pct": 0.03,
+      "pct_to_ceo": 30.0,
+      "pct_to_agency": 0.0,
+      "by_issue_class": {
+        "Billing - Account Inquiry": 5,
+        "Self Service Option": 5
+      },
+      "avg_esc_score": 1.32
+    },
+    "mobile_service": {
+      "broad_parent": "Service Issues",
+      "feedback_count": 378,
+      "ecaf_count": 5,
+      "ecaf_rate_pct": 1.32,
+      "pct_to_ceo": 60.0,
+      "pct_to_agency": 0.0,
+      "by_issue_class": {
+        "Service / Feature Issues - Mobile": 5
+      },
+      "avg_esc_score": 2.46
+    },
+    "outage": {
+      "broad_parent": "Service Issues",
+      "feedback_count": 3703,
+      "ecaf_count": 23,
+      "ecaf_rate_pct": 0.62,
+      "pct_to_ceo": 30.4,
+      "pct_to_agency": 47.8,
+      "by_issue_class": {
+        "Field - Maintenance": 13,
+        "Service / Feature Issues - Multiple LOBs": 10
+      },
+      "avg_esc_score": 1.9
+    },
+    "port_transfer": {
+      "broad_parent": "Account & Activation",
+      "feedback_count": 934,
+      "ecaf_count": 3,
+      "ecaf_rate_pct": 0.32,
+      "pct_to_ceo": 33.3,
+      "pct_to_agency": 33.3,
+      "by_issue_class": {
+        "Mobile - Device Unlock": 1,
+        "Phone Porting": 2
+      },
+      "avg_esc_score": 2.74
+    },
+    "transfer_setup": {
+      "broad_parent": "Install & Field",
+      "feedback_count": 13813,
+      "ecaf_count": 67,
+      "ecaf_rate_pct": 0.49,
+      "pct_to_ceo": 37.3,
+      "pct_to_agency": 3.0,
+      "by_issue_class": {
+        "Field - Installation/Service Visit": 23,
+        "Serviceability": 23,
+        "Field - Appointment": 21
+      },
+      "avg_esc_score": 2.07
+    },
+    "tv_cable": {
+      "broad_parent": "Service Issues",
+      "feedback_count": 15556,
+      "ecaf_count": 87,
+      "ecaf_rate_pct": 0.56,
+      "pct_to_ceo": 27.6,
+      "pct_to_agency": 4.6,
+      "by_issue_class": {
+        "Programming - Channel Line Up": 39,
+        "Service / Feature Issues - Spectrum TV App": 23,
+        "Service / Feature Issues - Video": 25
+      },
+      "avg_esc_score": 1.67
+    },
+    "upgrade_device": {
+      "broad_parent": "Devices & Equipment",
+      "feedback_count": 2993,
+      "ecaf_count": 8,
+      "ecaf_rate_pct": 0.27,
+      "pct_to_ceo": 25.0,
+      "pct_to_agency": 0.0,
+      "by_issue_class": {
+        "Device Payment Plan": 5,
+        "Mobile - Device Fulfillment": 1,
+        "Mobile - Device Return / Exchange": 2
+      },
+      "avg_esc_score": 1.49
+    },
+    "voicemail_spam": {
+      "broad_parent": "Service Issues",
+      "feedback_count": 372,
+      "ecaf_count": 2,
+      "ecaf_rate_pct": 0.54,
+      "pct_to_ceo": 0.0,
+      "pct_to_agency": 0.0,
+      "by_issue_class": {
+        "Service / Feature Issues - Voice": 2
+      },
+      "avg_esc_score": 1.18
+    }
+  },
+  "by_parent": {
+    "Billing & Payments": {
+      "feedback_count": 61665,
+      "ecaf_count": 399,
+      "ecaf_rate_pct": 0.65,
+      "categories": [
+        "billing",
+        "cancellation",
+        "disconnect"
+      ]
+    },
+    "Service Issues": {
+      "feedback_count": 42235,
+      "ecaf_count": 226,
+      "ecaf_rate_pct": 0.54,
+      "categories": [
+        "connectivity",
+        "tv_cable",
+        "outage",
+        "voicemail_spam",
+        "mobile_service"
+      ]
+    },
+    "Devices & Equipment": {
+      "feedback_count": 5104,
+      "ecaf_count": 13,
+      "ecaf_rate_pct": 0.25,
+      "categories": [
+        "device_repair",
+        "upgrade_device",
+        "delivery_shipping"
+      ]
+    },
+    "Account & Activation": {
+      "feedback_count": 7997,
+      "ecaf_count": 29,
+      "ecaf_rate_pct": 0.36,
+      "categories": [
+        "account_management",
+        "activation",
+        "port_transfer"
+      ]
+    },
+    "Install & Field": {
+      "feedback_count": 13813,
+      "ecaf_count": 67,
+      "ecaf_rate_pct": 0.49,
+      "categories": [
+        "transfer_setup"
+      ]
+    },
+    "Trust & Safety": {
+      "feedback_count": 654,
+      "ecaf_count": 6,
+      "ecaf_rate_pct": 0.92,
+      "categories": [
+        "fraud_security"
+      ]
+    },
+    "General": {
+      "feedback_count": 39272,
+      "ecaf_count": 10,
+      "ecaf_rate_pct": 0.03,
+      "categories": [
+        "general"
+      ]
+    }
+  }
+}
