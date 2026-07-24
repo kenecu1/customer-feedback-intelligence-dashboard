@@ -334,6 +334,8 @@ Raw feedback goes through 6 stages before it reaches the dashboard:
 
 Working within those limits, the system uses lightweight models to categorize and score all 176K records. Here is what each part does and why. Expand the sections below for the technical detail.
 
+> **Note:** The pipeline code was developed against proprietary company data and is not included in this public repo. This repository holds the interactive dashboard and synthetic sample data; the section below explains the approach.
+
 | Component | Model / Method | What it does |
 |-----------|---------------|--------------|
 | **Turning text into data** | TF-IDF | Turns written feedback into numbers the computer can compare, giving weight to the words that matter most |
