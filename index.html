@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spectrum Customer Feedback Dashboard</title>
+    <title>SPEC - Customer Feedback Intelligence Dashboard</title>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
     <style>
@@ -174,7 +174,7 @@
             border-color: #0077c8;
         }
 
-        /* Header — Spectrum dark navy */
+        /* Header — dark navy */
         .header {
             background: #0a2a3f;
             padding: 0 30px;
@@ -195,11 +195,15 @@
             font-weight: 800;
             color: #fff;
             letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            line-height: 1;
         }
 
         .logo-arrow {
             color: #0077c8;
             margin-left: 2px;
+            font-size: 1rem;
         }
 
         .header-title {
@@ -570,7 +574,7 @@
             font-weight: 600;
         }
 
-        /* ECAF + watch-list shared section styling */
+        /* Escalation Ticket + watch-list shared section styling */
         .ecaf-grid {
             display: grid;
             grid-template-columns: 1.4fr 1fr;
@@ -671,7 +675,7 @@
             white-space:pre-wrap;
         }
 
-        /* ECAF slide-out drawer */
+        /* Escalation Ticket slide-out drawer */
         .drawer-overlay {
             display:none; position:fixed; inset:0; background:rgba(10,42,63,0.30); z-index:900;
         }
@@ -1160,15 +1164,17 @@
         }
         .overview-hero {
             background: linear-gradient(135deg, #0a2a3f 0%, #002f6c 60%, #0077c8 100%);
-            padding: 18px 32px 16px 32px;
+            padding: 14px 32px 12px 32px;
             margin-bottom: 16px;
             position: relative;
             overflow: hidden;
         }
         .overview-hero::before { content:''; position:absolute; top:-40px; right:-40px; width:260px; height:260px; background:rgba(0,119,200,0.18); border-radius:50%; }
         .overview-hero::after  { content:''; position:absolute; bottom:-60px; right:120px; width:160px; height:160px; background:rgba(255,255,255,0.05); border-radius:50%; }
-        .hero-top { display:flex; justify-content:space-between; align-items:center; gap:24px; margin-bottom:14px; position:relative; z-index:1; }
-        .hero-brand { font-size:1.6rem; font-weight:800; color:#fff; letter-spacing:-0.5px; display:flex; align-items:center; }
+        .hero-top { display:flex; justify-content:space-between; align-items:flex-start; gap:24px; margin-bottom:14px; position:relative; z-index:1; }
+        .hero-brand { font-size:2.2rem; font-weight:800; color:#fff; letter-spacing:-0.5px; display:inline-flex; align-items:center; width:fit-content; }
+        .hero-brand svg { transition: transform 0.9s ease; transform-origin: center; }
+        .hero-brand:hover svg { transform: rotate(360deg); }
         .hero-arrow-span { color:#0077c8; margin-left:2px; }
         .hero-badge { background:rgba(0,119,200,0.3); color:#7ec8f8; font-size:0.62rem; font-weight:700; padding:3px 10px; border-radius:10px; letter-spacing:0.6px; text-transform:uppercase; border:1px solid rgba(0,119,200,0.4); white-space:nowrap; margin-top:5px; display:inline-block; }
         .hero-stats { display:flex; gap:24px; flex-shrink:0; align-items:center; }
@@ -1177,7 +1183,7 @@
         .hero-stat-val.blue { color:#fff; }
         .hero-stat-val.gold { color:#fff; }
         .hero-stat-label { font-size:0.58rem; font-weight:700; color:rgba(255,255,255,0.55); text-transform:uppercase; letter-spacing:0.6px; margin-top:1px; }
-        .hero-desc { font-size:0.78rem; color:rgba(255,255,255,0.7); line-height:1.55; max-width:700px; position:relative; z-index:1; border-top:1px solid rgba(255,255,255,0.08); padding-top:10px; margin-bottom:12px; }
+        .hero-desc { font-size:0.78rem; color:rgba(255,255,255,0.7); line-height:1.55; max-width:700px; position:relative; z-index:1; margin-bottom:12px; }
         .hero-desc strong { color:#fff; }
         .pipeline-section { position:relative; z-index:1; border-top:1px solid rgba(255,255,255,0.1); padding-top:10px; }
         .pipeline-label { font-size:0.58rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:rgba(255,255,255,0.35); margin-bottom:8px; }
@@ -1791,9 +1797,9 @@
 <body>
     <div class="header">
         <div class="header-left">
-            <div class="logo">Spectrum<span class="logo-arrow">&#9654;</span></div>
+            <div class="logo" style="display:inline-flex;align-items:center;">SPE<svg viewBox="0 0 42 48" fill="none" style="width:0.95em;height:0.95em;display:block;margin-left:-3px;"><path d="M34 14a16 16 0 1 0 0 20" stroke="#0077c8" stroke-width="4.5" stroke-linecap="round"/><polyline points="30,10 34,14 30,18" stroke="#0077c8" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
             <div class="header-title">Customer Feedback Intelligence</div>
-            <div style="font-size:0.6rem; color:#6b8099; font-weight:500; margin-left:14px; padding-left:14px; border-left:1px solid #2a4a6a;">Built by Kenneth Chow · Summer 2026 Internship Project · All data is synthetic/mock</div>
+            <div style="font-size:0.7rem; color:#9db0c4; font-weight:500; margin-left:14px; padding-left:14px; border-left:1px solid #2a4a6a;">Built by <strong style="color:#ffffff; font-weight:700;">Kenneth Chow</strong> · Summer 2026 Internship Project · All data is synthetic/mock</div>
         </div>
         <div class="filters">
             <div class="filter-group">
@@ -1891,19 +1897,19 @@
             <!-- Top: brand + description + stats -->
             <div class="hero-top">
                 <div>
-                    <div class="hero-brand">Spectrum<span class="hero-arrow-span">&#9654;</span></div>
-                    <div class="hero-subtitle">Customer Feedback Intelligence &nbsp;·&nbsp; CCED Analytics</div>
-                    <div class="hero-badge">Synthetic ECAF Demo</div>
+                    <div class="hero-brand">SPE<svg viewBox="0 0 42 48" fill="none" style="width:0.95em;height:0.95em;display:block;margin-left:-3px;"><path d="M34 14a16 16 0 1 0 0 20" stroke="#0077c8" stroke-width="4.5" stroke-linecap="round"/><polyline points="30,10 34,14 30,18" stroke="#0077c8" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                    <div style="font-size:0.68rem; color:rgba(255,255,255,0.5); font-weight:600; letter-spacing:0.8px; margin-top:2px;">Simplified Platform for Escalation & Case-analysis</div>
+                    <div class="hero-badge">Synthetic Data Demo</div>
                 </div>
-                <div style="flex:1; max-width:560px; align-self:center;">
+                <div style="flex:1; max-width:560px;">
                     <div class="hero-desc">
-                        Centralizes <strong id="welcomeTotalRecords">—</strong> records from 4 channels into actionable insights for the <strong>CCED escalation team</strong>.
+                        Centralizes <strong id="welcomeTotalRecords">—</strong> records from 4 channels into actionable insights for the <strong>escalation team</strong>.
                         Use the filters to drill by time, source, or category. Click the pipeline steps below to learn how the data flows. Navigate via the sidebar to <strong>Escalations</strong> or <strong>Sentiment</strong>.
                     </div>
                 </div>
                 <div class="hero-stats">
                     <div class="hero-stat"><div class="hero-stat-val" id="welcomeTotalRecordsCount">—</div><div class="hero-stat-label">Records</div></div>
-                    <div class="hero-stat"><div class="hero-stat-val blue" id="welcomeTotalEcafs">—</div><div class="hero-stat-label">ECAFs</div></div>
+                    <div class="hero-stat"><div class="hero-stat-val blue" id="welcomeTotalEcafs">—</div><div class="hero-stat-label">ESCs</div></div>
                     <div class="hero-stat"><div class="hero-stat-val gold">4</div><div class="hero-stat-label">Sources</div></div>
                 </div>
             </div>
@@ -1944,12 +1950,12 @@
                         <span class="pipeline-node-label">Sentiment</span>
                     </div>
                     <div class="pipeline-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg></div>
-                    <!-- Node 4: ECAF Mapping -->
+                    <!-- Node 4: Ticket Mapping -->
                     <div class="pipeline-node" onclick="openPipelinePopup(4)">
                         <div class="pipeline-node-icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="#7ec8f8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
                         </div>
-                        <span class="pipeline-node-label">ECAF Mapping</span>
+                        <span class="pipeline-node-label">Ticket Mapping</span>
                     </div>
                     <div class="pipeline-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg></div>
                     <!-- Node 5: Dashboard -->
@@ -2077,19 +2083,19 @@
             <div style="background:linear-gradient(160deg, #002f6c 0%, #0a2a3f 50%, #0077c8 100%); background-size:200% 200%; animation:bannerShift 12s ease infinite; padding:28px 32px 26px 32px; margin-bottom:16px; position:relative; overflow:hidden;">
                 <div style="position:absolute; top:-30px; left:-30px; width:200px; height:200px; background:rgba(0,119,200,0.15); border-radius:50%; animation:orbFloat 15s ease-in-out infinite alternate;"></div>
                 <div style="position:absolute; bottom:-50px; right:60px; width:180px; height:180px; background:rgba(255,255,255,0.04); border-radius:50%; animation:orbFloat 18s ease-in-out infinite alternate-reverse;"></div>
-                <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:24px; position:relative; z-index:1;">
+                <div style="display:flex; justify-content:space-between; align-items:center; gap:24px; position:relative; z-index:1;">
                     <div>
-                        <div class="hero-brand">Spectrum<span class="hero-arrow-span">&#9654;</span></div>
-                        <div style="font-size:0.78rem; color:rgba(255,255,255,0.6); margin-top:3px;">ECAF Escalation Analytics <span id="escScopeLabel" style="color:#7ec8f8;"></span></div>
+                        <div class="hero-brand">SPE<svg viewBox="0 0 42 48" fill="none" style="width:0.95em;height:0.95em;display:block;margin-left:-3px;"><path d="M34 14a16 16 0 1 0 0 20" stroke="#0077c8" stroke-width="4.5" stroke-linecap="round"/><polyline points="30,10 34,14 30,18" stroke="#0077c8" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                        <div style="font-size:0.78rem; color:rgba(255,255,255,0.6); margin-top:3px;">Escalation Analytics <span id="escScopeLabel" style="color:#7ec8f8;"></span></div>
                     </div>
-                    <div style="flex:1; font-size:0.78rem; color:rgba(255,255,255,0.7); line-height:1.6; padding-top:4px; max-width:550px;">
-                        Shows which complaints become <strong style="color:#fff;">formal escalations (ECAFs)</strong> and where they get <strong style="color:#fff;">routed</strong>. Identify which <strong style="color:#fff;">categories escalate most</strong>, understand <strong style="color:#fff;">routing patterns</strong>, and find opportunities to <strong style="color:#fff;">reduce escalations</strong>.
+                    <div style="flex:1; font-size:0.78rem; color:rgba(255,255,255,0.7); line-height:1.6; max-width:550px;">
+                        Shows which complaints become <strong style="color:#fff;">formal escalations (ESCs)</strong> and where they get <strong style="color:#fff;">routed</strong>. Identify which <strong style="color:#fff;">categories escalate most</strong>, understand <strong style="color:#fff;">routing patterns</strong>, and find opportunities to <strong style="color:#fff;">reduce escalations</strong>.
                     </div>
                     <button class="cta-btn ghost esc-back-btn" style="border-color:rgba(255,255,255,0.4); color:#fff; position:relative;" onclick="showView('dashboard')">&#8592; Back</button>
                 </div>
             </div>
 
-            <!-- Step 1: Thin flow strip — Feedback > ECAF > Escalated -->
+            <!-- Step 1: Thin flow strip — Feedback > Escalation Ticket > Escalated -->
             <div style="font-size:0.65rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:#8895a3; margin-bottom:5px;">Step 1 — How feedback becomes an escalation</div>
             <div style="background:#fff; border:1px solid #d0d7de; box-shadow:0 4px 18px rgba(0,0,0,0.13); padding:14px 24px; margin-bottom:10px; display:flex; align-items:center; justify-content:center; gap:18px; flex-wrap:wrap;">
                 <div style="display:flex; align-items:center; gap:8px;">
@@ -2101,7 +2107,7 @@
                 <div style="display:flex; align-items:center; gap:8px;">
                     <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#0077c8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
                     <span style="font-size:1.1rem; font-weight:800; color:#0a2a3f;" id="escFlowEcaf">—</span>
-                    <span style="font-size:0.7rem; color:#5a6a7a; font-weight:600;">ECAFs</span>
+                    <span style="font-size:0.7rem; color:#5a6a7a; font-weight:600;">ESCs</span>
                     <span style="font-size:0.68rem; color:#0077c8; font-weight:700;" id="escFlowRate"></span>
                 </div>
                 <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#d0d7de" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg>
@@ -2115,18 +2121,18 @@
 
             <!-- Step 2: Category breakdown (left) + Routing donut (right) -->
             <div style="font-size:0.65rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:#8895a3; margin-bottom:5px;">Step 2 — Category breakdown & where escalations go <span style="color:#0077c8; text-transform:none; font-weight:500;">· click a category or label to filter</span></div>
-            <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:10px; align-items:stretch;">
-                <div class="esc-narrative" style="height:300px; overflow:hidden; display:flex; flex-direction:column;">
-                    <h3>Category &#8594; ECAF Breakdown <span id="escNarrativeScopeLabel" style="color:#0077c8;font-weight:500;text-transform:none;letter-spacing:0;"></span> <span id="escAvgRateLabel" style="float:right; font-size:0.68rem; font-weight:600; color:#8895a3; text-transform:none; letter-spacing:0;"></span></h3>
-                    <div style="font-size:0.68rem; color:#8895a3; padding:6px 0 4px 0;">Categories ranked by ECAF count. Shows escalation rate vs average and % filed with regulatory agencies.</div>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:10px; align-items:start;">
+                <div class="esc-narrative" style="overflow:hidden; display:flex; flex-direction:column;">
+                    <h3>Category &#8594; ESC Breakdown <span id="escNarrativeScopeLabel" style="color:#0077c8;font-weight:500;text-transform:none;letter-spacing:0;"></span> <span id="escAvgRateLabel" style="float:right; font-size:0.68rem; font-weight:600; color:#8895a3; text-transform:none; letter-spacing:0;"></span></h3>
+                    <div style="font-size:0.68rem; color:#8895a3; padding:6px 0 4px 0;">Categories ranked by ESC count. Shows escalation rate vs average and % filed with regulatory agencies.</div>
                     <div class="esc-story-head">
                         <span>Category</span><span>Escalation Summary</span>
                     </div>
-                    <div class="esc-story-rows" id="escNarrativeRows" style="flex:1; overflow-y:auto; padding-bottom:4px;"></div>
+                    <div class="esc-story-rows" id="escNarrativeRows" style="overflow-y:auto;"></div>
                 </div>
-                <div class="chart-card" style="height:300px; display:flex; flex-direction:column;">
-                    <h3>Where Escalations Go <span class="click-hint">— CEO = executive · Agency = FCC/BBB/AG · CCED = internal</span> <span id="routingScopeHint" style="font-size:0.75rem; font-weight:700; color:#0077c8; text-transform:none; letter-spacing:0;"></span></h3>
-                    <div style="font-size:0.68rem; color:#8895a3; margin-top:8px;">Pie shows % of ECAFs routed to each destination. Click a segment or label to filter all widgets below.</div>
+                <div class="chart-card" style="height:320px; display:flex; flex-direction:column;">
+                    <h3>Where Escalations Go <span class="click-hint">— Executive = leadership · Agency = regulatory agency · Internal = handled in-house</span> <span id="routingScopeHint" style="font-size:0.75rem; font-weight:700; color:#0077c8; text-transform:none; letter-spacing:0;"></span></h3>
+                    <div style="font-size:0.68rem; color:#8895a3; margin-top:8px;">Pie shows % of ESCs routed to each destination. Click a segment or label to filter all widgets below.</div>
                     <div style="flex:1; position:relative;">
                         <div style="position:absolute; left:59px; top:19px; width:180px; height:180px;">
                             <canvas id="routingChart" width="180" height="180"></canvas>
@@ -2141,7 +2147,7 @@
             <div class="chart-grid" style="margin-bottom:10px;">
                 <div class="chart-card">
                     <h3>Top Issue Classifications <span class="click-hint">— click to filter tickets</span></h3>
-                    <div style="font-size:0.68rem; color:#8895a3; margin-top:8px; margin-bottom:4px;">Most common issue types within ECAFs. Bar length = number of ECAFs. Click a bar to see savings estimate and recommendations.</div>
+                    <div style="font-size:0.68rem; color:#8895a3; margin-top:8px; margin-bottom:4px;">Most common issue types within ESCs. Bar length = number of ESCs. Click a bar to see savings estimate and recommendations.</div>
                     <canvas id="issueClassChart"></canvas>
                 </div>
                 <div id="escSavingsCard" style="background:linear-gradient(135deg, #0a2a3f 0%, #002f6c 60%, #0077c8 100%); background-size:200% 200%; animation:bannerShift 12s ease infinite; border:1px solid rgba(0,119,200,0.3); padding:20px 24px; border-left:4px solid #0077c8; position:relative; overflow:hidden; display:flex; flex-direction:column;">
@@ -2161,7 +2167,7 @@
 
             <!-- ticket list -->
             <div class="drill-section" id="escTicketWidget" style="scroll-margin-top:72px;">
-                <h3>ECAF Tickets <span id="escTicketLabel" style="color:#0077c8;"></span> <span class="click-hint">— click to view details</span></h3>
+                <h3>ESC Tickets <span id="escTicketLabel" style="color:#0077c8;"></span> <span class="click-hint">— click to view details</span></h3>
                 <div class="drill-info" id="escTicketInfo">Individual escalation records sorted by severity. Click any ticket to see full customer recount and resolution details.</div>
                 <div id="escTicketList" style="max-height:500px; overflow-y:auto;"></div>
             </div>
@@ -2173,12 +2179,12 @@
             <div style="background:linear-gradient(160deg, #002f6c 0%, #0a2a3f 50%, #0077c8 100%); background-size:200% 200%; animation:bannerShift 12s ease infinite; padding:28px 32px 0 32px; margin-bottom:16px; position:relative; overflow:hidden;">
                 <div style="position:absolute; top:-30px; left:-30px; width:200px; height:200px; background:rgba(0,119,200,0.15); border-radius:50%; animation:orbFloat 15s ease-in-out infinite alternate; pointer-events:none;"></div>
                 <div style="position:absolute; bottom:-50px; right:60px; width:180px; height:180px; background:rgba(255,255,255,0.04); border-radius:50%; animation:orbFloat 18s ease-in-out infinite alternate-reverse; pointer-events:none;"></div>
-                <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:24px; position:relative; z-index:1;">
+                <div style="display:flex; justify-content:space-between; align-items:center; gap:24px; position:relative; z-index:1;">
                     <div>
-                        <div class="hero-brand">Spectrum<span class="hero-arrow-span">&#9654;</span></div>
+                        <div class="hero-brand">SPE<svg viewBox="0 0 42 48" fill="none" style="width:0.95em;height:0.95em;display:block;margin-left:-3px;"><path d="M34 14a16 16 0 1 0 0 20" stroke="#0077c8" stroke-width="4.5" stroke-linecap="round"/><polyline points="30,10 34,14 30,18" stroke="#0077c8" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
                         <div style="font-size:0.78rem; color:rgba(255,255,255,0.6); margin-top:3px;">Sentiment Analysis <span id="sentScopeLabel" style="color:#7ec8f8;"></span></div>
                     </div>
-                    <div style="flex:1; font-size:0.78rem; color:rgba(255,255,255,0.7); line-height:1.6; padding-top:4px; max-width:550px;">
+                    <div style="flex:1; font-size:0.78rem; color:rgba(255,255,255,0.7); line-height:1.6; max-width:550px;">
                         Measures <strong style="color:#fff;">customer satisfaction</strong> across all feedback channels using VADER sentiment analysis. Identify which <strong style="color:#fff;">categories have the most negativity</strong>, track <strong style="color:#fff;">sentiment trends</strong> over time, and pinpoint where <strong style="color:#fff;">dissatisfaction concentrates</strong>.
                     </div>
                     <button class="cta-btn ghost esc-back-btn" style="border-color:rgba(255,255,255,0.4); color:#fff; position:relative;" onclick="showView('dashboard')">&#8592; Back</button>
@@ -2291,7 +2297,7 @@
                 <div style="position:absolute; bottom:-50px; right:60px; width:180px; height:180px; background:rgba(255,255,255,0.04); border-radius:50%; animation:orbFloat 18s ease-in-out infinite alternate-reverse;"></div>
                 <div style="position:relative; z-index:1; display:flex; justify-content:space-between; align-items:flex-start;">
                     <div>
-                        <div class="hero-brand">Spectrum<span class="hero-arrow-span">&#9654;</span></div>
+                        <div class="hero-brand">SPE<svg viewBox="0 0 42 48" fill="none" style="width:0.95em;height:0.95em;display:block;margin-left:-3px;"><path d="M34 14a16 16 0 1 0 0 20" stroke="#0077c8" stroke-width="4.5" stroke-linecap="round"/><polyline points="30,10 34,14 30,18" stroke="#0077c8" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
                         <div style="font-size:0.78rem; color:rgba(255,255,255,0.6); margin-top:3px;">Settings</div>
                     </div>
                     <button class="cta-btn ghost esc-back-btn" style="border-color:rgba(255,255,255,0.4); color:#fff; position:relative;" onclick="showView('dashboard')">&#8592; Back</button>
@@ -2344,11 +2350,11 @@
         </div>
     </div>
 
-    <!-- ECAF modal -->
+    <!-- Escalation Ticket modal -->
     <div class="modal-overlay" id="ecafModal" onclick="if(event.target===this)closeEcaf()">
         <div class="modal">
             <div class="modal-header">
-                <h2>Escalated Customer Action Form <span class="ecaf-num" id="modalEcafNum"></span></h2>
+                <h2>Escalation Ticket <span class="ecaf-num" id="modalEcafNum"></span></h2>
                 <span class="modal-close" onclick="closeEcaf()">&times;</span>
             </div>
             <div class="modal-body" id="modalBody"></div>
@@ -2368,7 +2374,7 @@
     <div class="modal-overlay" id="ecafModal" onclick="if(event.target===this)closeEcaf()">
         <div class="modal">
             <div class="modal-header">
-                <h2>Escalated Customer Action Form <span class="ecaf-num" id="modalEcafNum"></span></h2>
+                <h2>Escalation Ticket <span class="ecaf-num" id="modalEcafNum"></span></h2>
                 <span class="modal-close" onclick="closeEcaf()">&times;</span>
             </div>
             <div class="modal-body" id="modalBody"></div>
@@ -2424,7 +2430,7 @@
         const source = document.getElementById('sourceFilter').value;
         let records = [...allRecords];
         if (timeDays !== 'all') {
-            const cutoff = new Date();
+            const cutoff = _maxDataDate ? new Date(_maxDataDate) : new Date();
             cutoff.setDate(cutoff.getDate() - parseInt(timeDays));
             const cutoffStr = cutoff.toISOString().split('T')[0];
             records = records.filter(r => r.date >= cutoffStr);
@@ -2478,6 +2484,7 @@
     // DATA LOADING
     // ============================================================
     let allRecords = [];
+    let _maxDataDate = null;
     let categorySummary = [];
     let resolutionMap = {};
     let dailyAgg = [];
@@ -2487,7 +2494,7 @@
 
     async function loadData() {
         try {
-            const [recordsRes, catRes, resRes, dailyRes, ecafSumRes, ecafRes] = await Promise.all([
+            const [recordsRes, catRes, resRes, dailyRes, ecafsumRes, ecafRes] = await Promise.all([
                 fetch('data/records.json?v=9'),
                 fetch('data/category_summary.json?v=9'),
                 fetch('data/resolution_map.json?v=9'),
@@ -2507,10 +2514,12 @@
                 sentiment_compound: r.sc,
                 esc_score: r.e
             }));
+            // Determine the most recent date in the data for time filter reference
+            _maxDataDate = allRecords.reduce((max, r) => r.date > max ? r.date : max, '');
             categorySummary = await catRes.json();
             resolutionMap = await resRes.json();
             dailyAgg = await dailyRes.json();
-            ecafSummary = await ecafSumRes.json();
+            ecafSummary = await ecafsumRes.json();
             ecafs = await ecafRes.json();
 
             const catSelect = document.getElementById('categoryFilter');
@@ -2555,7 +2564,7 @@
 
         let records = [...allRecords];
         if (timeDays !== 'all') {
-            const cutoff = new Date();
+            const cutoff = _maxDataDate ? new Date(_maxDataDate) : new Date();
             cutoff.setDate(cutoff.getDate() - parseInt(timeDays));
             const cutoffStr = cutoff.toISOString().split('T')[0];
             records = records.filter(r => r.date >= cutoffStr);
@@ -2680,8 +2689,8 @@
     // ============================================================
     // CHARTS
     // ============================================================
-    const SPECTRUM_BLUE = '#0077c8';
-    const SPECTRUM_NAVY = '#002f6c';
+    const BRAND_BLUE = '#0077c8';
+    const BRAND_NAVY = '#002f6c';
 
     // Register inline data labels plugin (draws value next to each bar — only for horizontal bars with indexAxis 'y')
     Chart.register({
@@ -2718,7 +2727,7 @@
                 labels: sorted.map(s => s[0].replace(/_/g, ' ')),
                 datasets: [{
                     data: sorted.map(s => s[1]),
-                    backgroundColor: SPECTRUM_BLUE,
+                    backgroundColor: BRAND_BLUE,
                     borderRadius: 3,
                 }]
             },
@@ -2748,11 +2757,11 @@
                         // Highlight selected bar, dim others
                         const ds = categoryChartInstance.data.datasets[0];
                         if (!isDeselect) {
-                            ds.backgroundColor = sorted.map((_, i) => i === idx ? SPECTRUM_BLUE : 'rgba(0,119,200,0.2)');
+                            ds.backgroundColor = sorted.map((_, i) => i === idx ? BRAND_BLUE : 'rgba(0,119,200,0.2)');
                             ds.borderWidth = sorted.map((_, i) => i === idx ? 2 : 0);
                             ds.borderColor = '#005fa3';
                         } else {
-                            ds.backgroundColor = SPECTRUM_BLUE;
+                            ds.backgroundColor = BRAND_BLUE;
                             ds.borderWidth = 0;
                         }
                         categoryChartInstance.update('none');
@@ -3011,7 +3020,7 @@
                         const catDs = categoryChartInstance.data.datasets[0];
                         const catLabels = categoryChartInstance.data.labels;
                         const catIdx = catLabels.indexOf(clickedCat.replace(/_/g,' '));
-                        catDs.backgroundColor = catLabels.map((_, i) => i === catIdx ? SPECTRUM_BLUE : 'rgba(0,119,200,0.2)');
+                        catDs.backgroundColor = catLabels.map((_, i) => i === catIdx ? BRAND_BLUE : 'rgba(0,119,200,0.2)');
                         catDs.borderWidth = catLabels.map((_, i) => i === catIdx ? 2 : 0);
                         catDs.borderColor = '#005fa3';
                         categoryChartInstance.update('none');
@@ -3132,7 +3141,7 @@
             data: {
                 labels: sorted.map(s => s[0]),
                 datasets: [
-                    { label: 'Weekly Total', data: sorted.map(s => s[1].total), borderColor: SPECTRUM_NAVY, backgroundColor: 'rgba(0,47,108,0.05)', fill: true, tension: 0.3, pointRadius: 2 },
+                    { label: 'Weekly Total', data: sorted.map(s => s[1].total), borderColor: BRAND_NAVY, backgroundColor: 'rgba(0,47,108,0.05)', fill: true, tension: 0.3, pointRadius: 2 },
                     { label: 'Negative', data: sorted.map(s => s[1].neg), borderColor: '#be185d', backgroundColor: 'rgba(220,38,38,0.05)', fill: true, tension: 0.3, pointRadius: 0 },
                 ]
             },
@@ -3150,7 +3159,7 @@
     function updateSourceChart(records) {
         const counts = {};
         records.forEach(r => { counts[r.source] = (counts[r.source] || 0) + 1; });
-        const colors = { call: SPECTRUM_NAVY, email: '#0077c8', social: '#6366f1', survey: '#8895a3' };
+        const colors = { call: BRAND_NAVY, email: '#0077c8', social: '#6366f1', survey: '#8895a3' };
 
         if (sourceChartInstance) sourceChartInstance.destroy();
         sourceChartInstance = new Chart(document.getElementById('sourceChart'), {
@@ -3300,7 +3309,7 @@
     function closeRecord() { document.getElementById('recordModal').classList.remove('open'); }
 
     // ============================================================
-    // ECAF ESCALATION LAYER  (synthetic / demonstration)
+    // Escalation Ticket ESCALATION LAYER  (synthetic / demonstration)
     // Full "Escalations" analytics view, toggled from the sidebar.
     // ============================================================
     let currentView = 'dashboard';
@@ -3371,7 +3380,7 @@
         if (_cbMode) return { pos: '#005AB5', neg: '#DC3220', neu: '#FFC20A' };
         return { pos: '#0f7b3b', neg: '#be185d', neu: '#8895a3' };
     }
-    // Helper: get routing colors (CEO, Agency, CCED) based on colorblind mode
+    // Helper: get routing colors (Executive, Agency, Internal) based on colorblind mode
     function getRouteColors() {
         if (_cbMode) return { ceo: '#DC3220', agency: '#FFC20A', cced: '#005AB5' };
         return { ceo: '#be185d', agency: '#b45309', cced: '#0077c8' };
@@ -3400,14 +3409,14 @@
         });
     })();
 
-    // Apply the SAME header/journey filters to the ECAF list that records use
+    // Apply the SAME header/journey filters to the Escalation Ticket list that records use
     function getScopedEcafs() {
         const timeDays = document.getElementById('timeFilter').value;
         const source = document.getElementById('sourceFilter').value;
         const category = document.getElementById('categoryFilter').value;
         let list = [...ecafs];
         if (timeDays !== 'all') {
-            const cutoff = new Date();
+            const cutoff = _maxDataDate ? new Date(_maxDataDate) : new Date();
             cutoff.setDate(cutoff.getDate() - parseInt(timeDays));
             const cutoffStr = cutoff.toISOString().split('T')[0];
             list = list.filter(e => (e.date_received || '') >= cutoffStr);
@@ -3443,7 +3452,7 @@
         if (!ecafSummary) return;
         let scoped = getScopedEcafs();
         if (escSelectedRouting) {
-            if (escSelectedRouting === 'CCED') {
+            if (escSelectedRouting === 'Internal') {
                 scoped = scoped.filter(e => !(e.escalated_to||'').includes('CEO') && !(e.escalated_to||'').includes('Agency'));
             } else {
                 scoped = scoped.filter(e => (e.escalated_to||'').includes(escSelectedRouting));
@@ -3478,7 +3487,7 @@
 
             // Issue-specific recommendations
             const issueRecommendations = {
-                'Billing - Rate Adjustment': { pct: 35, why: 'Customers escalate when rate changes are not communicated proactively before billing cycle', steps: ['Implement proactive rate change notifications 30 days prior', 'Train agents to offer retention pricing during first call', 'Add self service rate comparison tool to My Spectrum app'] },
+                'Billing - Rate Adjustment': { pct: 35, why: 'Customers escalate when rate changes are not communicated proactively before billing cycle', steps: ['Implement proactive rate change notifications 30 days prior', 'Train agents to offer retention pricing during first call', 'Add self service rate comparison tool to the mobile app'] },
                 'Billing - Wants Lower Price': { pct: 30, why: 'Price sensitivity escalations often bypass frontline due to limited discount authority', steps: ['Expand frontline agent retention offer authority', 'Create tiered loyalty discount matrix based on tenure', 'Deploy automated competitive rate matching at first contact'] },
                 'Billing - Promo Roll Off / Step Up': { pct: 40, why: 'Customers are surprised by price increases when promotional periods end without notice', steps: ['Send 60/30/7 day promo expiration reminders', 'Auto present renewal offers before promo ends', 'Add promo end date visibility in customer portal'] },
                 'Billing - One Time Charges': { pct: 25, why: 'Unexpected charges on bills drive escalations when agents cannot explain or waive them', steps: ['Require charge explanations at point of order entry', 'Enable frontline credit authority for one time charges under $50', 'Add itemized charge breakdowns to billing statements'] },
@@ -3488,7 +3497,7 @@
                 'Service / Feature Issues - Voice': { pct: 25, why: 'Phone service disruptions affect business customers heavily, triggering regulatory complaints', steps: ['Priority routing for voice service issues', 'Implement backup line forwarding during outages', 'Add battery backup verification in maintenance checks'] },
                 'Service / Feature Issues - Mobile': { pct: 30, why: 'Device and coverage issues compound when resolution requires multiple department transfers', steps: ['Create unified mobile support team (no transfers)', 'Expand coverage map transparency in sales process', 'Streamline device replacement process to single contact'] },
                 'Service / Feature Issues - Multiple LOBs': { pct: 35, why: 'Cross product issues require multiple teams, causing long resolution cycles', steps: ['Assign single point of contact for multi product issues', 'Build cross trained team for bundled service problems', 'Implement warm transfers with context preservation'] },
-                'Service / Feature Issues - Spectrum TV App': { pct: 40, why: 'App issues are often known bugs awaiting fixes, but frontline lacks visibility', steps: ['Create known issues dashboard visible to all agents', 'Push in app notifications for known issues with ETAs', 'Enable automatic credits for documented app outages'] },
+                'Service / Feature Issues - TV App': { pct: 40, why: 'App issues are often known bugs awaiting fixes, but frontline lacks visibility', steps: ['Create known issues dashboard visible to all agents', 'Push in app notifications for known issues with ETAs', 'Enable automatic credits for documented app outages'] },
                 'Equipment - Fulfillment': { pct: 30, why: 'Shipping delays and wrong equipment deliveries create cascading service activation issues', steps: ['Implement real time inventory tracking for accurate ETAs', 'Offer same day pickup at retail locations as alternative', 'Proactive shipment delay notifications with compensation'] },
                 'Equipment - Self Installation / Activation': { pct: 45, why: 'Self install failures lead to frustration when customers cannot get immediate help', steps: ['Improve self install guide with video walkthroughs', 'Add real time chat support during self installation', 'Auto detect failed activations and proactively call customer'] },
                 'Equipment Return': { pct: 25, why: 'Unreturned equipment charges after confirmed returns drive high emotion escalations', steps: ['Implement real time return tracking with confirmation texts', 'Auto reconcile returns within 48 hours of scan', 'Pause unreturned equipment charges during dispute period'] },
@@ -3511,7 +3520,7 @@
                 'Self Service Option': { pct: 40, why: 'Customers escalate when self service tools fail and they cannot reach a live agent quickly', steps: ['Monitor self service completion rates and fix failure points', 'Provide clear fallback path to live agent from all self service flows', 'Add real time chat as bridge between self service and call'] },
                 'Serviceability': { pct: 10, why: 'Address serviceability issues have limited prevention since they depend on infrastructure', steps: ['Improve address validation accuracy during sales process', 'Proactive communication of expected build out timelines', 'Offer fixed wireless or alternative solutions for edge cases'] },
                 'Device Payment Plan': { pct: 20, why: 'Confusion over device payment terms and early payoff penalties drive escalations', steps: ['Simplify device payment disclosures at point of sale', 'Enable self service payoff calculations in app', 'Remove early termination penalties for device payments'] },
-                'Account Administration (Cable and Mobile)': { pct: 25, why: 'Account management across cable and mobile platforms causes confusion and repeated contacts', steps: ['Unify cable and mobile account management in single portal', 'Cross train agents on both platforms', 'Implement single sign on across all Spectrum services'] },
+                'Account Administration (Cable and Mobile)': { pct: 25, why: 'Account management across cable and mobile platforms causes confusion and repeated contacts', steps: ['Unify cable and mobile account management in single portal', 'Cross train agents on both platforms', 'Implement single sign on across all services'] },
                 'Mobile - Device Insurance/Warranty': { pct: 20, why: 'Claims denials and replacement delays create urgency when customers are without devices', steps: ['Streamline claims approval process to same day decision', 'Offer loaner devices during warranty repairs', 'Improve transparency on coverage terms at point of sale'] },
                 'Mobile - Device Lost/Stolen/Damaged': { pct: 15, why: 'Emergency situations require immediate action that standard processes do not accommodate', steps: ['Instant line suspension via app with one tap', 'Same day replacement device shipping option', 'Streamline insurance claim for documented theft reports'] },
                 'Mobile - Device Return / Exchange': { pct: 25, why: 'Return window confusion and restocking fees surprise customers who feel misled', steps: ['Clear return policy communication at point of sale and on receipt', 'Extend return window to 30 days for new customers', 'Waive restocking fee for exchanges within same tier'] },
@@ -3542,7 +3551,7 @@
             } else {
                 methodologyHtml = `
                     <div style="font-size:0.82rem; color:rgba(255,255,255,0.6); line-height:1.7; border-top:1px solid rgba(255,255,255,0.1); padding-top:12px; margin-top:14px;">
-                        <strong style="color:#7ec8f8;">Methodology:</strong> 30% baseline is derived from industry benchmarks for preventable escalations (issues resolvable at first contact with proper agent tools/authority). Cost of $225/ECAF includes avg customer credit ($75) + resolution labor and overhead ($150). Select a specific issue above for targeted prevention rate and recommendations.
+                        <strong style="color:#7ec8f8;">Methodology:</strong> 30% baseline is derived from industry benchmarks for preventable escalations (issues resolvable at first contact with proper agent tools/authority). Cost of $225/Escalation Ticket includes avg customer credit ($75) + resolution labor and overhead ($150). Select a specific issue above for targeted prevention rate and recommendations.
                     </div>
                 `;
             }
@@ -3555,7 +3564,7 @@
                         <span style="font-size:1.1rem; color:rgba(255,255,255,0.7); margin-left:12px;">estimated savings</span>
                     </div>
                     <div style="font-size:1.15rem; color:rgba(255,255,255,0.8); line-height:2; margin-top:6px;">
-                        <strong style="color:#fff;">${savingsTotal}</strong> ECAFs in scope · <strong style="color:#7ec8f8;">${actualPct}%</strong> preventable = ~${actualPreventable} fewer · $${costPerEcaf}/ECAF
+                        <strong style="color:#fff;">${savingsTotal}</strong> ESCs in scope · <strong style="color:#7ec8f8;">${actualPct}%</strong> preventable = ~${actualPreventable} fewer · $${costPerEcaf}/ESC
                     </div>
                     ${methodologyHtml}
                     ${recsHtml}
@@ -3570,7 +3579,7 @@
                         <span style="font-size:1.1rem; color:rgba(255,255,255,0.7); margin-left:12px;">estimated savings</span>
                     </div>
                     <div style="font-size:1.15rem; color:rgba(255,255,255,0.8); line-height:2; margin-top:6px;">
-                        <strong style="color:#fff;">${savingsTotal}</strong> ECAFs · <strong style="color:#7ec8f8;">30%</strong> preventable = ~${preventable} fewer · $${costPerEcaf}/ECAF
+                        <strong style="color:#fff;">${savingsTotal}</strong> ESCs · <strong style="color:#7ec8f8;">30%</strong> preventable = ~${preventable} fewer · $${costPerEcaf}/ESC
                     </div>
                     <div style="font-size:1rem; color:rgba(255,255,255,0.6); margin-top:8px;">
                         Top targets: ${topIssues.map(([name,cnt]) => `${name.replace(/^(Billing|Service \/ Feature Issues|Mobile|Equipment|Account|Field) - ?/i, '')} (${cnt})`).join(' · ')}
@@ -3596,7 +3605,7 @@
         let scoped = getScopedEcafs();
         // Apply routing filter if a donut segment was clicked
         if (escSelectedRouting) {
-            if (escSelectedRouting === 'CCED') {
+            if (escSelectedRouting === 'Internal') {
                 scoped = scoped.filter(e => !(e.escalated_to||'').includes('CEO') && !(e.escalated_to||'').includes('Agency'));
             } else {
                 scoped = scoped.filter(e => (e.escalated_to||'').includes(escSelectedRouting));
@@ -3622,7 +3631,7 @@
         // ---- Potential Savings Card (delegates to standalone function) ----
         updateSavingsCalculator();
 
-        // ---- quadrant: per-category volume vs ECAF rate ----
+        // ---- quadrant: per-category volume vs ESC Rate ----
         const ecByCat = {};
         scoped.forEach(e => { ecByCat[e.category] = (ecByCat[e.category]||0)+1; });
         const sentByCat = {};
@@ -3637,13 +3646,13 @@
             if (vol < 50) return; // Skip categories with too few records (avoids 100% rates from tiny samples)
             const ecRate = ecByCat[cat] / vol * 100;
             const avgSent = sentByCat[cat] ? sentByCat[cat].sum / sentByCat[cat].n : 0;
-            points.push({ x: vol, y: parseFloat(ecRate.toFixed(2)), r: Math.max(12, Math.sqrt(ecByCat[cat]) * 4), cat, ecafs: ecByCat[cat], avgSent });
+            points.push({ x: vol, y: parseFloat(ecRate.toFixed(2)), r: Math.max(12, Math.sqrt(ecByCat[cat]) * 4), cat, ESCs: ecByCat[cat], avgSent });
         });
         // Spread bubbles evenly across x-axis so they don't overlap
         points.sort((a,b) => b.ecafs - a.ecafs);
         points.forEach((p, i) => { p.x = i + 1; });
 
-        // ---- flow strip (thin inline: Feedback > ECAF > Leadership) ----
+        // ---- flow strip (thin inline: Feedback > Escalation Ticket > Leadership) ----
         const toLeadership = ceo + agency;
         const fmtK2 = n => n >= 1000 ? (n/1000).toFixed(1)+'K' : n;
         const escFlowFb = document.getElementById('escFlowFeedback');
@@ -3655,7 +3664,7 @@
         if (escFlowEc) escFlowEc.textContent = total;
         if (escFlowRate2) escFlowRate2.textContent = `(${rate.toFixed(2)}%)`;
         if (escFlowLd) escFlowLd.textContent = toLeadership;
-        if (escFlowLdPct) escFlowLdPct.textContent = total ? `(${Math.round(toLeadership/total*100)}% of ECAFs)` : '';
+        if (escFlowLdPct) escFlowLdPct.textContent = total ? `(${Math.round(toLeadership/total*100)}% of ESCs)` : '';
 
         // ---- routing donut (always shows full routing split, not filtered by routing) ----
         const allScopedForDonut = escSelectedCat ? getScopedEcafs().filter(e => e.category === escSelectedCat) : getScopedEcafs();
@@ -3664,28 +3673,28 @@
         const donutAgency = allScopedForDonut.filter(e => (e.escalated_to||'').includes('Agency')).length;
         const donutCced = donutTotal - donutCeo - donutAgency;
         const centerCount = escSelectedRouting
-            ? (escSelectedRouting === 'CCED'
+            ? (escSelectedRouting === 'Internal'
                 ? allScopedForDonut.filter(e => !(e.escalated_to||'').includes('CEO') && !(e.escalated_to||'').includes('Agency')).length
                 : allScopedForDonut.filter(e => (e.escalated_to||'').includes(escSelectedRouting)).length)
             : donutTotal;
-        const centerLabel = escSelectedRouting ? '→ ' + escSelectedRouting : (escSelectedCat ? escSelectedCat.replace(/_/g,' ') : 'ECAFs');
+        const centerLabel = escSelectedRouting ? '→ ' + escSelectedRouting : (escSelectedCat ? escSelectedCat.replace(/_/g,' ') : 'ESCs');
         if (routingInstance) routingInstance.destroy();
         // Determine which segment to highlight (pop out + dim others)
         const segmentOffsets = [
             escSelectedRouting === 'CEO' ? 18 : 0,
             escSelectedRouting === 'Agency' ? 18 : 0,
-            escSelectedRouting === 'CCED' ? 18 : 0,
+            escSelectedRouting === 'Internal' ? 18 : 0,
         ];
         const _rc = getRouteColors();
         const bgColors = escSelectedRouting ? [
             escSelectedRouting === 'CEO' ? _rc.ceo : _rc.ceo + '40',
             escSelectedRouting === 'Agency' ? _rc.agency : _rc.agency + '40',
-            escSelectedRouting === 'CCED' ? _rc.cced : _rc.cced + '40',
+            escSelectedRouting === 'Internal' ? _rc.cced : _rc.cced + '40',
         ] : [_rc.ceo, _rc.agency, _rc.cced];
         routingInstance = new Chart(document.getElementById('routingChart'), {
             type: 'doughnut',
             data: {
-                labels: ['CEO / Executive', 'Agency (FCC/BBB/AG)', 'CCED Direct'],
+                labels: ['Executive', 'Agency', 'Internal'],
                 datasets: [{ data: [donutCeo, donutAgency, Math.max(0,donutCced)], backgroundColor: bgColors, offset: segmentOffsets }]
             },
             plugins: [{
@@ -3711,7 +3720,7 @@
                 onClick: (e, els) => {
                     if (!els.length) return;
                     const idx = els[0].index;
-                    const routes = ['CEO', 'Agency', 'CCED'];
+                    const routes = ['CEO', 'Agency', 'Internal'];
                     toggleRouting(routes[idx]);
                 }
             }
@@ -3724,9 +3733,9 @@
         if (routingLabelsEl) {
             const _rl = getRouteColors();
             const items = [
-                { label: 'CEO / Executive', count: donutCeo, color: _rl.ceo, key: 'CEO' },
-                { label: 'Agency (FCC/BBB/AG)', count: donutAgency, color: _rl.agency, key: 'Agency' },
-                { label: 'CCED Internal', count: Math.max(0, donutCced), color: _rl.cced, key: 'CCED' },
+                { label: 'Executive', count: donutCeo, color: _rl.ceo, key: 'CEO' },
+                { label: 'Agency', count: donutAgency, color: _rl.agency, key: 'Agency' },
+                { label: 'Internal', count: Math.max(0, donutCced), color: _rl.cced, key: 'Internal' },
             ];
             routingLabelsEl.innerHTML = items.map(item => {
                 const pct = donutTotal > 0 ? Math.round(item.count / donutTotal * 100) : 0;
@@ -3788,7 +3797,7 @@
         const heroEl = document.getElementById('escHeroSentence');
         if (heroEl) {
             const scopeTxt = scopeLabelText() ? scopeLabelText().replace('— ','') : 'all categories';
-            heroEl.innerHTML = `<span style="color:#5fb4e8;">&#9650;</span>&nbsp; <strong>${totalFeedback.toLocaleString()}</strong> feedback records &nbsp;&#8594;&nbsp; <strong>${total}</strong> synthetic ECAFs &nbsp;&#8594;&nbsp; <strong>${ceo}</strong> reached the CEO / Exec &nbsp;&bull;&nbsp; <strong>${agency}</strong> went to an agency (FCC / BBB / AG) &nbsp;&bull;&nbsp; Scope: <em>${scopeTxt}</em>`;
+            heroEl.innerHTML = `<span style="color:#5fb4e8;">&#9650;</span>&nbsp; <strong>${totalFeedback.toLocaleString()}</strong> feedback records &nbsp;&#8594;&nbsp; <strong>${total}</strong> synthetic ESCs &nbsp;&#8594;&nbsp; <strong>${ceo}</strong> reached the CEO / Exec &nbsp;&bull;&nbsp; <strong>${agency}</strong> went to an agency (regulatory agency) &nbsp;&bull;&nbsp; Scope: <em>${scopeTxt}</em>`;
         }
 
         renderTicketList();
@@ -3800,7 +3809,7 @@
         const scopeEl = document.getElementById('escNarrativeScopeLabel');
         if (!container) return;
 
-        // Group ECAFs by category
+        // Group ESCs by category
         const byCat = {};
         scoped.forEach(e => {
             if (!byCat[e.category]) byCat[e.category] = { total: 0, ceo: 0, agency: 0, labels: {} };
@@ -3816,36 +3825,52 @@
         scopeEl.textContent = cat !== 'all' ? `— ${cat.replace(/_/g,' ')}` : (activeStage ? `— ${JOURNEY_STAGES[activeStage].name}` : '');
 
         if (!sorted.length) {
-            container.innerHTML = '<div style="color:#8895a3;font-size:0.8rem;padding:12px 0;">No ECAFs in this scope.</div>';
+            container.innerHTML = '<div style="color:#8895a3;font-size:0.8rem;padding:12px 0;">No ESCs in this scope.</div>';
             return;
         }
 
-        // Calculate average ECAF rate across all categories for comparison
+        // Calculate average ESC Rate across all categories for comparison
         const totalAllFeedback = Object.values(fbByCat).reduce((a,b)=>a+b, 0);
-        const totalAllEcafs = sorted.reduce((sum, [_, s]) => sum + s.total, 0);
-        const avgEcafRate = totalAllFeedback > 0 ? (totalAllEcafs / totalAllFeedback * 100) : 0;
+        const totalAllecafs = sorted.reduce((sum, [_, s]) => sum + s.total, 0);
+        const avgEscalationRate = totalAllFeedback > 0 ? (totalAllecafs / totalAllFeedback * 100) : 0;
 
         // Show average in header
         const avgLabel = document.getElementById('escAvgRateLabel');
-        if (avgLabel) avgLabel.innerHTML = `Avg ECAF Rate: <span style="color:#0077c8; font-weight:700;">${avgEcafRate.toFixed(2)}%</span>`;
+        if (avgLabel) avgLabel.innerHTML = `Avg ESC Rate: <span style="color:#0077c8; font-weight:700;">${avgEscalationRate.toFixed(2)}%</span>`;
 
         container.innerHTML = sorted.map(([catKey, s]) => {
             const feedback = fbByCat[catKey] || 0;
             const rate = feedback > 0 ? (s.total / feedback * 100).toFixed(2) : '—';
             const rateNum = feedback > 0 ? (s.total / feedback * 100) : 0;
-            const aboveAvg = rateNum > avgEcafRate;
+            const aboveAvg = rateNum > avgEscalationRate;
             const agencyPct = s.total > 0 ? Math.round(s.agency / s.total * 100) : 0;
-            const rateIndicator = aboveAvg ? `<span style="color:#be185d; font-weight:700; font-size:0.7rem;">▲ ${(rateNum - avgEcafRate).toFixed(2)}% above avg</span>` : `<span style="color:#8895a3; font-size:0.7rem;">▼ ${(avgEcafRate - rateNum).toFixed(2)}% below avg</span>`;
-            const sentence = `<strong>${s.total} ECAFs</strong> from ${feedback.toLocaleString()} records · <span class="esc-pill esc-pill-rate">${rate}% became ECAFs</span> ${rateIndicator}${agencyPct > 0 ? ` · <span style="color:#b45309; font-weight:700;">${agencyPct}% filed with FCC/BBB</span>` : ''}`;
+            const rateIndicator = aboveAvg ? `<span style="color:#be185d; font-weight:700; font-size:0.7rem;">▲ ${(rateNum - avgEscalationRate).toFixed(2)}% above avg</span>` : `<span style="color:#8895a3; font-size:0.7rem;">▼ ${(avgEscalationRate - rateNum).toFixed(2)}% below avg</span>`;
+            const sentence = `<strong>${s.total} ESCs</strong> from ${feedback.toLocaleString()} records · <span class="esc-pill esc-pill-rate">${rate}% became ESCs</span> ${rateIndicator}${agencyPct > 0 ? ` · <span style="color:#b45309; font-weight:700;">${agencyPct}% filed with agency</span>` : ''}`;
 
             const isActive = escSelectedCat === catKey;
             return `<div class="esc-story-row${isActive ? ' esc-row-active' : ''}" style="cursor:pointer;" onclick="escBubbleClick('${catKey}')">
                 <div class="esc-story-cat">${catKey.replace(/_/g,' ')}
-                    <small>${s.total} ecafs · ${feedback.toLocaleString()} feedback</small>
+                    <small>${s.total} ESCs · ${feedback.toLocaleString()} feedback</small>
                 </div>
                 <div class="esc-story-sentence">${sentence}</div>
             </div>`;
         }).join('');
+
+        // Fit the scroll window to exactly the first 3 rows (still scrollable for the rest),
+        // then match the routing pie card's height so the two stay aligned.
+        requestAnimationFrame(() => {
+            const rows = container.children;
+            const narrativeBox = container.closest('.esc-narrative');
+            const pieBox = narrativeBox ? narrativeBox.nextElementSibling : null;
+            if (rows.length > 3) {
+                container.style.height = ((rows[2].offsetTop + rows[2].offsetHeight) - rows[0].offsetTop) + 'px';
+            } else {
+                container.style.height = '';
+            }
+            if (narrativeBox && pieBox) {
+                pieBox.style.height = narrativeBox.offsetHeight + 'px';
+            }
+        });
     }
 
     function escBubbleClick(cat) {
@@ -3891,7 +3916,7 @@
         if (escSelectedCat) { list = list.filter(e => e.category === escSelectedCat); labelBits.push(escSelectedCat.replace(/_/g,' ')); }
         if (escSelectedIssue) { list = list.filter(e => e.issue_classification === escSelectedIssue); labelBits.push(escSelectedIssue); }
         if (escSelectedRouting) {
-            if (escSelectedRouting === 'CCED') {
+            if (escSelectedRouting === 'Internal') {
                 list = list.filter(e => !(e.escalated_to||'').includes('CEO') && !(e.escalated_to||'').includes('Agency'));
             } else {
                 list = list.filter(e => (e.escalated_to||'').includes(escSelectedRouting));
@@ -3906,7 +3931,7 @@
             ? ` <a href="#" onclick="escSelectedCat=null;escSelectedIssue=null;escSelectedRouting=null;renderEscalations();return false;" style="color:#0077c8;">(clear all filters)</a>` : '';
 
         const body = document.getElementById('escTicketList');
-        if (!list.length) { body.innerHTML = '<div class="drawer-empty">No ECAFs in this scope.</div>'; info.innerHTML = `0 ECAFs in this scope.${clearBtn}`; return; }
+        if (!list.length) { body.innerHTML = '<div class="drawer-empty">No ESCs in this scope.</div>'; info.innerHTML = `0 ESCs in this scope.${clearBtn}`; return; }
 
         let escShown = 10;
         function renderEscBatch() {
@@ -3914,7 +3939,7 @@
             body.innerHTML = slice.map(e => {
                 const route = e.escalated_to || '';
                 const cls = route.includes('CEO') ? 'ceo' : (route.includes('Agency') ? 'agency' : '');
-                const shortRoute = route.includes('CEO') ? 'CEO' : (route.includes('Agency') ? 'Agency' : 'CCED');
+                const shortRoute = route.includes('CEO') ? 'CEO' : (route.includes('Agency') ? 'Agency' : 'Internal');
                 return `<div class="ecaf-ticket" onclick="openEcafById(${e.ecaf_id})">
                     <div class="t-top">
                         <span class="t-issue">${e.issue_classification}</span>
@@ -3933,7 +3958,7 @@
                     renderEscBatch();
                 };
             }
-            info.innerHTML = `Showing ${Math.min(escShown, list.length)} of ${list.length} ECAFs. <span style="color:#0077c8;">Click a ticket to view full details.</span>${clearBtn}`;
+            info.innerHTML = `Showing ${Math.min(escShown, list.length)} of ${list.length} ESCs. <span style="color:#0077c8;">Click a ticket to view full details.</span>${clearBtn}`;
         }
         renderEscBatch();
     }
@@ -4075,6 +4100,21 @@
             sentFiltersEl.innerHTML = `<span style="font-size:0.68rem; color:#8895a3; text-transform:uppercase; letter-spacing:0.5px; font-weight:700; margin-right:6px;">Filters:</span>` + filters.map(f => `<span style="background:#e0f2fe; color:#0077c8; padding:3px 8px; font-weight:600; font-size:0.72rem; margin-right:4px;">${f}</span>`).join('');
         }
         renderSentFeedback(filteredRecords, null);
+        // Update Total Records Analyzed to reflect the sentiment filter
+        const sTotalEl = document.getElementById('sTotalRecords');
+        const sTotalSub = document.getElementById('sTotalSub');
+        if (sTotalEl) {
+            if (sentFeedbackFilter) {
+                const count = filteredRecords.filter(r => r.sentiment === sentFeedbackFilter).length;
+                const str = count.toLocaleString();
+                sTotalEl.innerHTML = str.split('').map((ch, i) => `<span class="slot-digit" style="animation-delay:${i * 0.04}s;">${ch}</span>`).join('');
+                if (sTotalSub) sTotalSub.textContent = sentFeedbackFilter + ' records';
+            } else {
+                const str = filteredRecords.length.toLocaleString();
+                sTotalEl.innerHTML = str.split('').map((ch, i) => `<span class="slot-digit" style="animation-delay:${i * 0.04}s;">${ch}</span>`).join('');
+                if (sTotalSub) sTotalSub.textContent = 'across all channels';
+            }
+        }
         updateAiInsights();
     }
 
@@ -4134,64 +4174,77 @@
     function renderEcaf(e) {
         document.getElementById('modalEcafNum').textContent = `#${e.ecaf_id}`;
         const credit = (e.credit_amount && e.credit_amount > 0) ? `$${Number(e.credit_amount).toFixed(2)}` : '$0.00';
+        const statusColor = e.ticket_status === 'Closed' ? '#0f7b3b' : e.ticket_status === 'In Progress' ? '#0077c8' : '#b45309';
+        const routeLabel = (e.escalated_to || '').includes('CEO') ? 'Executive' : (e.escalated_to || '').includes('Agency') ? 'Agency' : 'Internal';
+        const priority = (e.esc_score||0) >= 4 ? 'High' : (e.esc_score||0) >= 2 ? 'Medium' : 'Low';
+        const priorityColor = priority === 'High' ? '#be185d' : priority === 'Medium' ? '#b45309' : '#8895a3';
         document.getElementById('modalBody').innerHTML = `
-            <div class="modal-section-title">Customer Details</div>
-            <div class="ecaf-fields">
-                ${fieldHtml('Customer Name', e.customer_name)}
-                ${fieldHtml('Account Number', e.account_number)}
-                ${fieldHtml('Customer Type', e.customer_type)}
-                ${fieldHtml('Account Status', e.account_status)}
-                ${fieldHtml('Management Area', e.management_area)}
-                ${fieldHtml('Monthly Recurring Cost', e.monthly_cost ? '$'+Number(e.monthly_cost).toFixed(2) : '—')}
+            <div style="display:flex; gap:32px; margin-bottom:20px; padding-bottom:16px; border-bottom:1px solid #e8e8e8;">
+                <div>
+                    <div style="font-size:0.62rem; font-weight:700; text-transform:uppercase; letter-spacing:0.8px; color:#8895a3; margin-bottom:4px;">Status</div>
+                    <div style="font-size:0.92rem; font-weight:700; color:${statusColor};">${e.ticket_status || 'Open'}</div>
+                </div>
+                <div>
+                    <div style="font-size:0.62rem; font-weight:700; text-transform:uppercase; letter-spacing:0.8px; color:#8895a3; margin-bottom:4px;">Priority</div>
+                    <div style="font-size:0.92rem; font-weight:700; color:${priorityColor};">${priority}</div>
+                </div>
+                <div>
+                    <div style="font-size:0.62rem; font-weight:700; text-transform:uppercase; letter-spacing:0.8px; color:#8895a3; margin-bottom:4px;">Date Filed</div>
+                    <div style="font-size:0.92rem; font-weight:600; color:#0a2a3f;">${e.date_received || '—'}</div>
+                </div>
+                <div>
+                    <div style="font-size:0.62rem; font-weight:700; text-transform:uppercase; letter-spacing:0.8px; color:#8895a3; margin-bottom:4px;">Source</div>
+                    <div style="font-size:0.92rem; font-weight:600; color:#0a2a3f;">${e.origin_of_escalation || e.source || '—'}</div>
+                </div>
             </div>
-            <div class="modal-section-title">Escalation Details</div>
-            <div class="ecaf-fields">
-                ${fieldHtml('Origin of Escalation', e.origin_of_escalation)}
-                ${fieldHtml('Escalated To', e.escalated_to)}
-                ${fieldHtml('ECAF Related To', e.ecaf_related_to)}
-                ${fieldHtml('Issue Classification', e.issue_classification)}
-                ${fieldHtml('Driver', e.driver)}
-                ${fieldHtml('Date Received by CCED', e.date_received)}
+            <div style="display:flex; gap:32px; margin-bottom:20px;">
+                <div>
+                    <div style="font-size:0.62rem; font-weight:700; text-transform:uppercase; letter-spacing:0.8px; color:#8895a3; margin-bottom:4px;">Category</div>
+                    <div style="font-size:0.92rem; font-weight:600; color:#0a2a3f;">${(e.ecaf_related_to || e.category || '—').replace(/_/g,' ')}</div>
+                </div>
+                <div>
+                    <div style="font-size:0.62rem; font-weight:700; text-transform:uppercase; letter-spacing:0.8px; color:#8895a3; margin-bottom:4px;">Issue Classification</div>
+                    <div style="font-size:0.92rem; font-weight:600; color:#0a2a3f;">${e.issue_classification || '—'}</div>
+                </div>
+                <div>
+                    <div style="font-size:0.62rem; font-weight:700; text-transform:uppercase; letter-spacing:0.8px; color:#8895a3; margin-bottom:4px;">Routed To</div>
+                    <div style="font-size:0.92rem; font-weight:600; color:#0a2a3f;">${routeLabel}</div>
+                </div>
             </div>
-            <div class="modal-section-title">Customer Recount</div>
-            <div class="ecaf-recount">${e.customer_recount || '—'}</div>
-            <div class="modal-section-title">Assignment & Findings</div>
-            <div class="ecaf-fields">
-                ${fieldHtml('Assigned Department', e.assigned_department)}
-                ${fieldHtml('Ticket Status', e.ticket_status)}
-                ${fieldHtml('Customer Contact Required', e.customer_contact_required)}
-                ${fieldHtml('Credit Amount', credit)}
-                ${fieldHtml('Primary Concern', e.primary_concern)}
-                ${fieldHtml('Escalation Propensity Score', e.esc_score)}
+            <div style="margin-bottom:20px;">
+                <div style="font-size:0.62rem; font-weight:700; text-transform:uppercase; letter-spacing:0.8px; color:#8895a3; margin-bottom:8px;">Customer Feedback</div>
+                <div class="ecaf-recount">${e.customer_recount || '—'}</div>
+            </div>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; padding-top:16px; border-top:1px solid #e8e8e8;">
+                <div>
+                    <div style="font-size:0.62rem; font-weight:700; text-transform:uppercase; letter-spacing:0.8px; color:#8895a3; margin-bottom:4px;">Credit Applied</div>
+                    <div style="font-size:0.92rem; font-weight:600; color:#0a2a3f;">${credit}</div>
+                </div>
+                <div>
+                    <div style="font-size:0.62rem; font-weight:700; text-transform:uppercase; letter-spacing:0.8px; color:#8895a3; margin-bottom:4px;">Assigned To</div>
+                    <div style="font-size:0.92rem; font-weight:600; color:#0a2a3f;">${e.assigned_department || '—'}</div>
+                </div>
             </div>`;
         document.getElementById('ecafModal').classList.add('open');
     }
 
     function draftEcaf(rec) {
-        // Build an on-the-fly ECAF preview from a watch-list record
+        // Build an on-the-fly ticket preview from a watch-list record
         const e = ecafs.find(x => x.source_record_id === rec.id);
         if (e) { renderEcaf(e); return; }
         renderEcaf({
             ecaf_id: 'DRAFT',
-            customer_name: '(would pull from account)',
-            account_number: '(would pull from account)',
-            customer_type: 'Residential',
-            account_status: '—',
-            management_area: '—',
-            monthly_cost: null,
-            origin_of_escalation: ({social:'Social Media',email:'Customer Letter',call:'Phone',survey:'Survey'})[rec.source] || '—',
-            escalated_to: 'Pending Intake',
+            origin_of_escalation: ({social:'Social Media',email:'Email',call:'Phone',survey:'Survey'})[rec.source] || '—',
+            escalated_to: 'Pending',
             ecaf_related_to: rec.category,
-            issue_classification: '(map from category)',
-            driver: 'Customer',
+            issue_classification: '(pending classification)',
             date_received: rec.date,
             customer_recount: rec.text,
-            assigned_department: '(route on intake)',
-            ticket_status: 'Draft / Not yet filed',
-            customer_contact_required: 'Yes',
+            assigned_department: '(pending assignment)',
+            ticket_status: 'Draft',
             credit_amount: 0,
-            primary_concern: (rec.esc_score||0) >= 3 ? 'Yes' : 'No',
-            esc_score: rec.esc_score
+            esc_score: rec.esc_score,
+            source: rec.source
         });
     }
 
@@ -4462,9 +4515,9 @@
     const PIPELINE_STEPS = [
         { title: 'Raw Feedback', body: 'We collected 176,000 customer feedback records from 4 sources: call center notes, customer emails, social media posts, and survey responses.' },
         { title: 'Normalize', body: 'All 4 sources are cleaned and merged into one consistent format. Headers, signatures, and repetitive language are removed. What remains is the actual customer complaint in plain text.' },
-        { title: 'NLP Classify', body: 'Natural Language Processing reads each record and assigns it to one of 16 issue categories: billing, connectivity, outage, cancellation, and more. These align directly with real ECAF issue classifications.' },
+        { title: 'NLP Classify', body: 'Natural Language Processing reads each record and assigns it to one of 16 issue categories: billing, connectivity, outage, cancellation, and more. These align directly with real escalation issue classifications.' },
         { title: 'Sentiment Analysis', body: 'Every record is scored from negative to positive. This tells us not just what customers are talking about, but how they feel about it. High negativity categories are flagged as pain points.' },
-        { title: 'Escalation Scoring', body: 'The system detects language that signals a customer is about to escalate: "supervisor", "cancel", "FCC", "third time calling." These records are flagged as high risk for becoming a formal ECAF.' },
+        { title: 'Escalation Scoring', body: 'The system detects language that signals a customer is about to escalate: "supervisor", "cancel", "attorney", "third time calling." These records are flagged as high risk for becoming a formal ESC.' },
         { title: 'Dashboard', body: 'All processed data flows into this interactive dashboard. Three views: Overview (big picture), Escalations (which complaints become formal cases), and Sentiment (how customers feel over time).' },
     ];
 
@@ -4753,11 +4806,11 @@
                 const highRoute = issueCeo >= issueAgency ? 'CEO' : 'Agency';
                 const highCount = Math.max(issueCeo, issueAgency);
                 const highPct = issueEcafs.length > 0 ? Math.round(highCount/issueEcafs.length*100) : 0;
-                if (savingsWidget) addAiBadge(savingsWidget, `${issueEcafs.length} ECAFs preventable — see actions below`);
+                if (savingsWidget) addAiBadge(savingsWidget, `${issueEcafs.length} ESCs preventable — see actions below`);
                 if (ticketWidget) addAiBadge(ticketWidget, `${highPct}% go to ${highRoute} — look for repeat contacts`);
-                if (issueWidget) addAiBadge(issueWidget, `${issueEcafs.length} ECAFs — highest cost classification`);
+                if (issueWidget) addAiBadge(issueWidget, `${issueEcafs.length} ESCs — highest cost classification`);
             } else if (escSelectedRouting) {
-                const routeEcafs = escSelectedRouting === 'CCED' ? badgeEcafs.filter(e => !(e.escalated_to||'').includes('CEO') && !(e.escalated_to||'').includes('Agency')) : badgeEcafs.filter(e => (e.escalated_to||'').includes(escSelectedRouting));
+                const routeEcafs = escSelectedRouting === 'Internal' ? badgeEcafs.filter(e => !(e.escalated_to||'').includes('CEO') && !(e.escalated_to||'').includes('Agency')) : badgeEcafs.filter(e => (e.escalated_to||'').includes(escSelectedRouting));
                 const routeIssueCounts = {};
                 routeEcafs.forEach(e => { routeIssueCounts[e.issue_classification] = (routeIssueCounts[e.issue_classification]||0)+1; });
                 const routeTopIssue = Object.entries(routeIssueCounts).sort((a,b)=>b[1]-a[1])[0];
@@ -4778,7 +4831,7 @@
                 const catTopIssue = Object.entries(catIssueCounts).sort((a,b)=>b[1]-a[1])[0];
                 const worstRoute = catAgency > catCeo ? `${catAgency} go to Agency` : `${catCeo} go to CEO`;
                 if (routingWidget) addAiBadge(routingWidget, `${worstRoute} — highest risk path`);
-                if (issueWidget) addAiBadge(issueWidget, `${catTopIssue ? catTopIssue[0].replace(/^.*? - /, '') : '—'} = top driver (${catTopIssue ? catTopIssue[1] : 0} ECAFs)`);
+                if (issueWidget) addAiBadge(issueWidget, `${catTopIssue ? catTopIssue[0].replace(/^.*? - /, '') : '—'} = top driver (${catTopIssue ? catTopIssue[1] : 0} ESCs)`);
                 if (narrative) addAiBadge(narrative, `${catRate}% of feedback escalates — ${parseFloat(catRate) > 5 ? 'above avg' : 'monitor'}`);
             } else {
                 // No filter — point to the biggest problems with specifics
@@ -4786,8 +4839,8 @@
                 const topCatCount = badgeTopCat ? badgeTopCat[1] : 0;
                 const topIssueName = badgeTopIssue ? badgeTopIssue[0] : '—';
                 const topIssueCount = badgeTopIssue ? badgeTopIssue[1] : 0;
-                if (narrative) addAiBadge(narrative, `${topCatName} = ${topCatCount} ECAFs — biggest problem`);
-                if (routingWidget) addAiBadge(routingWidget, `${badgeAgency} of ${badgeEcafs.length} ECAFs filed with FCC/BBB/AG (${badgeAgencyPct}%)`);
+                if (narrative) addAiBadge(narrative, `${topCatName} = ${topCatCount} ESCs — biggest problem`);
+                if (routingWidget) addAiBadge(routingWidget, `${badgeAgency} of ${badgeEcafs.length} ESCs filed with regulatory agency (${badgeAgencyPct}%)`);
                 if (issueWidget) addAiBadge(issueWidget, `${topIssueName} (${topIssueCount}) — start here`);
                 if (savingsWidget) addAiBadge(savingsWidget, `${badgeHighRateCat} has ${badgeHighRate.toFixed(1)}% rate — highest`);
             }
@@ -4851,7 +4904,7 @@
         // Only show cards when something is actively filtered/clicked
         const hasFilter = (cat !== 'all' || source !== 'all' || activeStage || activeSentimentFilter || escSelectedCat || escSelectedIssue);
         if (!hasFilter && currentView === 'dashboard') {
-            // Show feedback intelligence starting point — no ECAF language
+            // Show feedback intelligence starting point — no Escalation Ticket language
             const srcCounts = {};
             filteredRecords.forEach(r => { srcCounts[r.source] = (srcCounts[r.source]||0)+1; });
             // Find category with highest negative sentiment
@@ -4900,8 +4953,8 @@
             const escTopIssue = Object.entries(escIssueCounts).sort((a,b)=>b[1]-a[1])[0];
             const savingsEst = Math.round(scopedAll.length * 0.3) * 225;
             container.innerHTML = `<div class="ai-float-card">
-                <div class="ai-card-label">${scopedAll.length} ECAFs — $${savingsEst.toLocaleString()} Reduction Potential</div>
-                <strong>${escTopCatName}</strong> has the most ECAFs (${escTopCat ? escTopCat[1] : 0}). <strong>${escHighRateCat}</strong> has the highest escalation rate (${escHighRate.toFixed(1)}%). In <strong>Step 2</strong>, click <strong>${escTopCatName}</strong> in the category breakdown to see its routing. Then in <strong>Step 3</strong>, click <strong>${escTopIssue ? escTopIssue[0] : 'the top issue'}</strong> (${escTopIssue ? escTopIssue[1] : 0} ECAFs) for savings estimate and prevention actions.
+                <div class="ai-card-label">${scopedAll.length} ESCs — $${savingsEst.toLocaleString()} Reduction Potential</div>
+                <strong>${escTopCatName}</strong> has the most ESCs (${escTopCat ? escTopCat[1] : 0}). <strong>${escHighRateCat}</strong> has the highest escalation rate (${escHighRate.toFixed(1)}%). In <strong>Step 2</strong>, click <strong>${escTopCatName}</strong> in the category breakdown to see its routing. Then in <strong>Step 3</strong>, click <strong>${escTopIssue ? escTopIssue[0] : 'the top issue'}</strong> (${escTopIssue ? escTopIssue[1] : 0} ESCs) for savings estimate and prevention actions.
             </div>`;
             void container.offsetWidth;
             container.classList.add('open');
@@ -4975,16 +5028,16 @@
         const mostNegCatName = mostNegCat ? mostNegCat[0].replace(/_/g,' ') : '—';
         const mostNegCatPct = mostNegCat && catCounts[mostNegCat[0]] ? (mostNegCat[1]/catCounts[mostNegCat[0]]*100).toFixed(0) : 0;
 
-        // ECAF stats
-        const scopedEcafs = (typeof getScopedEcafs === 'function') ? getScopedEcafs() : [];
-        const ecafCount = scopedEcafs.length;
-        const ecafCeo = scopedEcafs.filter(e => (e.escalated_to||'').includes('CEO')).length;
-        const ecafAgency = scopedEcafs.filter(e => (e.escalated_to||'').includes('Agency')).length;
-        const ecafRate = total > 0 ? (ecafCount/total*100).toFixed(2) : 0;
+        // Escalation Ticket stats
+        const scopedecafs = (typeof getScopedEcafs === 'function') ? getScopedEcafs() : [];
+        const ecafCount = scopedecafs.length;
+        const ecafCeo = scopedecafs.filter(e => (e.escalated_to||'').includes('CEO')).length;
+        const ecafAgency = scopedecafs.filter(e => (e.escalated_to||'').includes('Agency')).length;
+        const EscalationRate = total > 0 ? (ecafCount/total*100).toFixed(2) : 0;
 
-        // ECAF by category
+        // Escalation Ticket by category
         const ecafByCat = {};
-        scopedEcafs.forEach(e => { ecafByCat[e.category] = (ecafByCat[e.category]||0)+1; });
+        scopedecafs.forEach(e => { ecafByCat[e.category] = (ecafByCat[e.category]||0)+1; });
         const ecafCatSorted = Object.entries(ecafByCat).sort((a,b)=>b[1]-a[1]);
         const topEcafCat = ecafCatSorted[0];
         const topEcafCatName = topEcafCat ? topEcafCat[0].replace(/_/g,' ') : '—';
@@ -4999,7 +5052,7 @@
 
         // Top issue classification
         const icCounts = {};
-        scopedEcafs.forEach(e => { icCounts[e.issue_classification] = (icCounts[e.issue_classification]||0)+1; });
+        scopedecafs.forEach(e => { icCounts[e.issue_classification] = (icCounts[e.issue_classification]||0)+1; });
         const topIssue = Object.entries(icCounts).sort((a,b)=>b[1]-a[1])[0];
         const topIssueName = topIssue ? topIssue[0] : '—';
 
@@ -5044,14 +5097,14 @@
 
             // Find which category has most agency routing
             const agencyByCat = {};
-            scopedEcafs.filter(e => (e.escalated_to||'').includes('Agency')).forEach(e => { agencyByCat[e.category] = (agencyByCat[e.category]||0)+1; });
+            scopedecafs.filter(e => (e.escalated_to||'').includes('Agency')).forEach(e => { agencyByCat[e.category] = (agencyByCat[e.category]||0)+1; });
             const topAgencyCat = Object.entries(agencyByCat).sort((a,b)=>b[1]-a[1])[0];
             const topAgencyCatName = topAgencyCat ? topAgencyCat[0].replace(/_/g,' ') : '—';
             const topAgencyCatCount = topAgencyCat ? topAgencyCat[1] : 0;
 
             // Top issue across all
             const allIssueCounts = {};
-            scopedEcafs.forEach(e => { allIssueCounts[e.issue_classification] = (allIssueCounts[e.issue_classification]||0)+1; });
+            scopedecafs.forEach(e => { allIssueCounts[e.issue_classification] = (allIssueCounts[e.issue_classification]||0)+1; });
             const topIssueArr = Object.entries(allIssueCounts).sort((a,b)=>b[1]-a[1]);
             const topIssueItem = topIssueArr[0];
             const topIssueName2 = topIssueItem ? topIssueItem[0] : '—';
@@ -5059,7 +5112,7 @@
             const secondIssueItem = topIssueArr[1];
 
             if (escSelectedIssue) {
-                const issueEcafs = scopedEcafs.filter(e => e.issue_classification === escSelectedIssue);
+                const issueEcafs = scopedecafs.filter(e => e.issue_classification === escSelectedIssue);
                 const issueCeo = issueEcafs.filter(e => (e.escalated_to||'').includes('CEO')).length;
                 const issueAgency = issueEcafs.filter(e => (e.escalated_to||'').includes('Agency')).length;
                 const issueCced = issueEcafs.length - issueCeo - issueAgency;
@@ -5072,11 +5125,11 @@
                 issueEcafs.forEach(e => { issueSources[e.source || 'unknown'] = (issueSources[e.source || 'unknown']||0)+1; });
                 const topIssueSource = Object.entries(issueSources).sort((a,b)=>b[1]-a[1])[0];
 
-                cards.push({ label: `${escSelectedIssue}`, text: `<strong>${issueEcafs.length} ECAFs</strong> — ${dominantPct}% route to <strong>${dominantRoute}</strong> (${dominantCount} tickets). ${dominantRoute === 'Agency' ? 'These carry regulatory risk and highest cost per case (~$400+).' : dominantRoute === 'CEO' ? 'Executive office handling costs ~$300 per case in labor.' : 'Internal routing is lowest cost but still $150/case.'} ${topIssueSource ? `Primary source channel: <strong>${topIssueSource[0]}</strong> (${topIssueSource[1]}).` : ''} Look at the <strong>calculator on the right</strong> for the specific savings estimate and recommended prevention actions.` });
-                cards.push({ label: 'What to Check in Tickets Below', text: `Scroll down to the <strong>ECAF Tickets</strong> section. For each ticket ask: (1) How many contacts before this ECAF was filed? If > 2, first-call-resolution failed. (2) Was a resolution offered? If yes but rejected, the offer was insufficient. If no, agents lacked authority. (3) Does the recount mention "told", "promised", "supervisor"? Those are broken handoff signals.` });
+                cards.push({ label: `${escSelectedIssue}`, text: `<strong>${issueEcafs.length} ESCs</strong> — ${dominantPct}% route to <strong>${dominantRoute}</strong> (${dominantCount} tickets). ${dominantRoute === 'Agency' ? 'These carry regulatory risk and highest cost per case (~$400+).' : dominantRoute === 'CEO' ? 'Executive office handling costs ~$300 per case in labor.' : 'Internal routing is lowest cost but still $150/case.'} ${topIssueSource ? `Primary source channel: <strong>${topIssueSource[0]}</strong> (${topIssueSource[1]}).` : ''} Look at the <strong>calculator on the right</strong> for the specific savings estimate and recommended prevention actions.` });
+                cards.push({ label: 'What to Check in Tickets Below', text: `Scroll down to the <strong>ESC Tickets</strong> section. For each ticket ask: (1) How many contacts before this ESC was filed? If > 2, first-call-resolution failed. (2) Was a resolution offered? If yes but rejected, the offer was insufficient. If no, agents lacked authority. (3) Does the recount mention "told", "promised", "supervisor"? Those are broken handoff signals.` });
 
             } else if (escSelectedRouting) {
-                const routeEcafs = escSelectedRouting === 'CCED' ? scopedEcafs.filter(e => !(e.escalated_to||'').includes('CEO') && !(e.escalated_to||'').includes('Agency')) : scopedEcafs.filter(e => (e.escalated_to||'').includes(escSelectedRouting));
+                const routeEcafs = escSelectedRouting === 'Internal' ? scopedecafs.filter(e => !(e.escalated_to||'').includes('CEO') && !(e.escalated_to||'').includes('Agency')) : scopedecafs.filter(e => (e.escalated_to||'').includes(escSelectedRouting));
                 const routeIssueCounts = {};
                 routeEcafs.forEach(e => { routeIssueCounts[e.issue_classification] = (routeIssueCounts[e.issue_classification]||0)+1; });
                 const routeTopIssues = Object.entries(routeIssueCounts).sort((a,b)=>b[1]-a[1]).slice(0,3);
@@ -5085,19 +5138,19 @@
                 const routeTopCat = Object.entries(routeCatCounts).sort((a,b)=>b[1]-a[1])[0];
 
                 if (escSelectedRouting === 'Agency') {
-                    cards.push({ label: `Agency: ${routeEcafs.length} ECAFs at Regulatory Risk`, text: `Top category: <strong>${routeTopCat ? routeTopCat[0].replace(/_/g,' ') : '—'}</strong> (${routeTopCat ? routeTopCat[1] : 0}). Top issues: ${routeTopIssues.map(([n,c]) => `<strong>${n}</strong> (${c})`).join(', ')}. In the <strong>Category Breakdown</strong> (left), look at which rows have the most agency routing. Then click the top issue in <strong>Step 3</strong> to see prevention recommendations.` });
-                    cards.push({ label: 'Agency Prevention Signals', text: `Customers file FCC/BBB complaints 5 to 7 days after: mentioning "FCC", "attorney", "third call". Check tickets below for these signals. <strong>Immediate action:</strong> Any ticket with 3+ contacts on the same issue should be flagged for proactive callback within 24 hours before the customer files externally.` });
+                    cards.push({ label: `Agency: ${routeEcafs.length} ESCs at Regulatory Risk`, text: `Top category: <strong>${routeTopCat ? routeTopCat[0].replace(/_/g,' ') : '—'}</strong> (${routeTopCat ? routeTopCat[1] : 0}). Top issues: ${routeTopIssues.map(([n,c]) => `<strong>${n}</strong> (${c})`).join(', ')}. In the <strong>Category Breakdown</strong> (left), look at which rows have the most agency routing. Then click the top issue in <strong>Step 3</strong> to see prevention recommendations.` });
+                    cards.push({ label: 'Agency Prevention Signals', text: `Customers file agency complaints 5 to 7 days after: mentioning "agency", "attorney", "third call". Check tickets below for these signals. <strong>Immediate action:</strong> Any ticket with 3+ contacts on the same issue should be flagged for proactive callback within 24 hours before the customer files externally.` });
                 } else if (escSelectedRouting === 'CEO') {
                     cards.push({ label: `CEO: ${routeEcafs.length} Executive Escalations`, text: `Top category: <strong>${routeTopCat ? routeTopCat[0].replace(/_/g,' ') : '—'}</strong> (${routeTopCat ? routeTopCat[1] : 0}). Top issues: ${routeTopIssues.map(([n,c]) => `<strong>${n}</strong> (${c})`).join(', ')}. CEO escalations typically come from tenure 3+ year customers. In <strong>Step 3</strong>, click the top issue bar to see the calculator estimate and specific recommended actions.` });
                     cards.push({ label: 'CEO Escalation Pattern', text: `Look in tickets below for: "I was told", "promised", "no one called back". These indicate broken internal handoffs. <strong>Fix:</strong> Assign single point of contact after 2nd contact on same issue. The <strong>calculator</strong> shows exact savings if you prevent 30 to 40% of these.` });
                 } else {
-                    cards.push({ label: `Internal: ${routeEcafs.length} CCED Escalations`, text: `Top category: <strong>${routeTopCat ? routeTopCat[0].replace(/_/g,' ') : '—'}</strong> (${routeTopCat ? routeTopCat[1] : 0}). Top issues: ${routeTopIssues.map(([n,c]) => `<strong>${n}</strong> (${c})`).join(', ')}. Internal is lowest cost but still ~$150/case. Click a <strong>Top Issue bar in Step 3</strong> to see how to reduce these through first-call-resolution improvements.` });
+                    cards.push({ label: `Internal: ${routeEcafs.length} Internal Escalations`, text: `Top category: <strong>${routeTopCat ? routeTopCat[0].replace(/_/g,' ') : '—'}</strong> (${routeTopCat ? routeTopCat[1] : 0}). Top issues: ${routeTopIssues.map(([n,c]) => `<strong>${n}</strong> (${c})`).join(', ')}. Internal is lowest cost but still ~$150/case. Click a <strong>Top Issue bar in Step 3</strong> to see how to reduce these through first-call-resolution improvements.` });
                     cards.push({ label: 'Reduce Internal Escalations', text: `These are the "winnable" ones — they stayed internal because the customer still trusts the company. Prevent them by: expanding agent credit authority (check <strong>Billing</strong> issues), improving knowledge base (check <strong>Service</strong> issues), and reducing transfers (check <strong>Account</strong> issues).` });
                 }
 
             } else if (escSelectedCat) {
                 const catLabel = escSelectedCat.replace(/_/g,' ');
-                const catEcafs = scopedEcafs.filter(e => e.category === escSelectedCat);
+                const catEcafs = scopedecafs.filter(e => e.category === escSelectedCat);
                 const catCeo = catEcafs.filter(e => (e.escalated_to||'').includes('CEO')).length;
                 const catAgency = catEcafs.filter(e => (e.escalated_to||'').includes('Agency')).length;
                 const catCced = catEcafs.length - catCeo - catAgency;
@@ -5108,15 +5161,15 @@
                 const catTopIssues = Object.entries(catIssueCounts).sort((a,b)=>b[1]-a[1]).slice(0,3);
                 const dominantRoute = catCeo >= catAgency && catCeo >= catCced ? 'CEO' : catAgency >= catCced ? 'Agency' : 'Internal';
 
-                cards.push({ label: `${catLabel}: ${catEcafs.length} ECAFs (${catEscRate}% rate)`, text: `From ${catFb.toLocaleString()} feedback records. Routes to: CEO ${catCeo} · Agency ${catAgency} · Internal ${catCced}. Dominant path: <strong>${dominantRoute}</strong>. Look at the <strong>pie chart</strong> (right) — ${dominantRoute === 'Agency' ? 'agency routing means regulatory risk, click that segment to filter.' : dominantRoute === 'CEO' ? 'CEO routing means high-value customers, click that segment.' : 'internal is good but still costs money.'}` });
+                cards.push({ label: `${catLabel}: ${catEcafs.length} ESCs (${catEscRate}% rate)`, text: `From ${catFb.toLocaleString()} feedback records. Routes to: CEO ${catCeo} · Agency ${catAgency} · Internal ${catCced}. Dominant path: <strong>${dominantRoute}</strong>. Look at the <strong>pie chart</strong> (right) — ${dominantRoute === 'Agency' ? 'agency routing means regulatory risk, click that segment to filter.' : dominantRoute === 'CEO' ? 'CEO routing means high-value customers, click that segment.' : 'internal is good but still costs money.'}` });
                 cards.push({ label: 'Drill Deeper', text: `In <strong>Step 3 Top Issues</strong> (left), the chart now shows issues specific to ${catLabel}. Top: ${catTopIssues.map(([n,c]) => `<strong>${n.replace(/^(Billing|Service \/ Feature Issues|Mobile|Equipment|Account|Field) - ?/i, '')}</strong> (${c})`).join(', ')}. Click the biggest bar — the <strong>calculator</strong> will show exact savings and 3 recommended actions tailored to that issue.` });
 
             } else {
                 // No escalation filter — tell them exactly where to start
                 const savingsEst = Math.round(ecafCount * 0.3) * 225;
 
-                cards.push({ label: `${ecafCount} ECAFs — $${savingsEst.toLocaleString()} Reduction Potential`, text: `<strong>${topVolCatName}</strong> leads with ${topVolCatCount} ECAFs (${ecafCount > 0 ? Math.round(topVolCatCount/ecafCount*100) : 0}% of total). ${topAgencyCatCount > 0 ? `<strong>${topAgencyCatName}</strong> sends the most to Agency (${topAgencyCatCount}).` : ''} In <strong>Step 2 Category Breakdown</strong> (left), click <strong>${topVolCatName}</strong> to see where those escalations route. The pie chart will update to show CEO vs Agency vs Internal split.` });
-                cards.push({ label: 'Your Fastest Path to Savings', text: `<strong>Step 3</strong> shows <strong>${topIssueName2}</strong> as the #1 issue (${topIssueCount} ECAFs). Click that bar — the <strong>calculator</strong> will show the specific preventable percentage, dollar savings, and 3 recommended actions. ${secondIssueItem ? `Runner up: <strong>${secondIssueItem[0]}</strong> (${secondIssueItem[1]}).` : ''} Each issue has its own custom prevention rate based on resolvability at first contact.` });
+                cards.push({ label: `${ecafCount} ESCs — $${savingsEst.toLocaleString()} Reduction Potential`, text: `<strong>${topVolCatName}</strong> leads with ${topVolCatCount} ESCs (${ecafCount > 0 ? Math.round(topVolCatCount/ecafCount*100) : 0}% of total). ${topAgencyCatCount > 0 ? `<strong>${topAgencyCatName}</strong> sends the most to Agency (${topAgencyCatCount}).` : ''} In <strong>Step 2 Category Breakdown</strong> (left), click <strong>${topVolCatName}</strong> to see where those escalations route. The pie chart will update to show CEO vs Agency vs Internal split.` });
+                cards.push({ label: 'Your Fastest Path to Savings', text: `<strong>Step 3</strong> shows <strong>${topIssueName2}</strong> as the #1 issue (${topIssueCount} ESCs). Click that bar — the <strong>calculator</strong> will show the specific preventable percentage, dollar savings, and 3 recommended actions. ${secondIssueItem ? `Runner up: <strong>${secondIssueItem[0]}</strong> (${secondIssueItem[1]}).` : ''} Each issue has its own custom prevention rate based on resolvability at first contact.` });
             }
         } else if (currentView === 'sentiment') {
             const sentNegCount = filteredRecords.filter(r => r.sentiment === 'negative').length;
@@ -5139,7 +5192,7 @@
                 const filterCount = filteredRecords.filter(r => r.sentiment === sentFeedbackFilter).length;
                 const filterPct = total > 0 ? (filterCount/total*100).toFixed(1) : 0;
                 cards.push({ label: `${sentFeedbackFilter.charAt(0).toUpperCase() + sentFeedbackFilter.slice(1)} Feedback: ${filterCount} records (${filterPct}%)`, text: `Showing only <strong>${sentFeedbackFilter}</strong> records. ${sentFeedbackFilter === 'negative' ? `Look for patterns: "supervisor", "cancel", "not resolved", "third time". These indicate process failures. Most negative category: <strong>${sWorst2}</strong> (${sWorstPct2.toFixed(0)}%).` : sentFeedbackFilter === 'positive' ? 'Positive feedback shows what is working well. Look for: compliments to specific agents, features praised, and smooth experiences to replicate.' : 'Neutral records are informational — questions, status checks, account inquiries. High neutral % means customers are using support as a lookup tool.'}` });
-                cards.push({ label: 'What to Look For', text: `${sentFeedbackFilter === 'negative' ? 'Scroll through the records below. Identify: (1) Repeat language ("again", "still", "third call"). (2) Escalation signals ("supervisor", "FCC", "cancel"). (3) Broken promises ("told me", "was supposed to"). These patterns tell you exactly where processes are failing.' : sentFeedbackFilter === 'positive' ? 'Identify what drives satisfaction: fast resolution, friendly agent, clear communication, or working product. These insights help replicate success across other categories.' : 'Look for: questions that could be answered by self-service (opportunity to deflect), and repeated informational inquiries that indicate confusion about products or policies.'}` });
+                cards.push({ label: 'What to Look For', text: `${sentFeedbackFilter === 'negative' ? 'Scroll through the records below. Identify: (1) Repeat language ("again", "still", "third call"). (2) Escalation signals ("supervisor", "agency", "cancel"). (3) Broken promises ("told me", "was supposed to"). These patterns tell you exactly where processes are failing.' : sentFeedbackFilter === 'positive' ? 'Identify what drives satisfaction: fast resolution, friendly agent, clear communication, or working product. These insights help replicate success across other categories.' : 'Look for: questions that could be answered by self-service (opportunity to deflect), and repeated informational inquiries that indicate confusion about products or policies.'}` });
             } else if (source !== 'all' || cat !== 'all') {
                 const scopeLabel = source !== 'all' ? source : cat.replace(/_/g,' ');
                 cards.push({ label: `${scopeLabel} — Sentiment Breakdown`, text: `<strong>${total.toLocaleString()}</strong> records in scope. <strong>${sentNegPctCards}% negative</strong> (${sentNegCount}). ${parseInt(sentNegPctCards) > 40 ? 'High negativity — this segment has significant dissatisfaction.' : parseInt(sentNegPctCards) > 25 ? 'Moderate negativity — trending concerns in this area.' : 'Sentiment is manageable for this segment.'} Check the trend chart to see if it is growing or stable.` });
@@ -5204,3 +5257,24 @@
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
