@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <a href="https://iridescent-taiyaki-2af528.netlify.app/"><strong>Live Demo</strong></a> · <a href="#the-problem">Problem</a> · <a href="#the-dashboard">Dashboard</a> · <a href="#business-impact">Impact</a> · <a href="#data-sources">Data</a> · <a href="#the-pipeline">Pipeline</a> · <a href="#machine-learning--nlp">ML</a> · <a href="#tools--why">Tools</a> · <a href="#skills-demonstrated">Skills</a> · <a href="#run-locally">Run</a>
+  <a href="https://reliable-creponne-ecdb5a.netlify.app/"><strong>Live Demo</strong></a> · <a href="#the-problem">Problem</a> · <a href="#the-dashboard">Dashboard</a> · <a href="#business-impact">Impact</a> · <a href="#data-sources">Data</a> · <a href="#the-pipeline">Pipeline</a> · <a href="#machine-learning--nlp">ML</a> · <a href="#tools--why">Tools</a> · <a href="#skills-demonstrated">Skills</a> · <a href="#run-locally">Run</a>
 </p>
 
 > [!IMPORTANT]
@@ -445,7 +445,7 @@ python -m http.server 8000
 # Open http://localhost:8000
 ```
 
-Or just visit the **[Live Demo](https://iridescent-taiyaki-2af528.netlify.app/)**.
+Or just visit the **[Live Demo](https://reliable-creponne-ecdb5a.netlify.app/)**.
 
 ---
 
