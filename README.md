@@ -11,7 +11,7 @@
 </p>
 
 > [!IMPORTANT]
-> **⭐ Adopted in practice.** The Group Vice President of Customer Operations endorsed this dashboard, and the department is adopting its design and framework for future use.
+> **⭐ Adopted in practice.** The department of customer operations is adopting its design and framework for future use.
 
 ---
 
